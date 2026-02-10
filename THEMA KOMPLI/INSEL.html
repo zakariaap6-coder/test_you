@@ -1,0 +1,4002 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deutsch B2 Prüfung - Inseln</title>
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    :root {
+      --primary-color: #1e3a5f;
+      --secondary-color: #2c5282;
+      --accent-color: #4da6ff;
+      --light-color: #ebf8ff;
+      --text-color: #2d3748;
+      --white: #ffffff;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: var(--white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    button {
+      cursor: pointer;
+    }
+    
+    /* ===== START PAGE STYLES ===== */
+    .start-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .start-content {
+      max-width: 600px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+    }
+    
+    .logo-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .card {
+      background-color: var(--white);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      color: var(--text-color);
+    }
+    
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+    
+    .card p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 2px solid var(--accent-color);
+      outline: none;
+      background-color: var(--white);
+      color: var(--text-color);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    select:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3);
+    }
+    
+    .timer-container {
+      margin: 25px 0;
+    }
+    
+    .timer-label {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .timer {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--accent-color);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .progress-bar {
+      height: 8px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    
+    .progress {
+      height: 100%;
+      width: 100%;
+      background-color: var(--accent-color);
+      border-radius: 4px;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 1s linear;
+    }
+    
+    .info-text {
+      font-size: 14px;
+      margin-top: 20px;
+      opacity: 0.8;
+    }
+    
+    .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .btn:hover {
+      background-color: #3399ff;
+    }
+    
+    /* ===== EXAM PAGE STYLES ===== */
+    .exam-body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Header Styles */
+    header.topbar {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      min-height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .brand .logo {
+      width: 80px;
+      height: 40px;
+      background: #e74c3c;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 18px;
+    }
+
+    .meta .main-title {
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .meta .sub-title {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .timer {
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      margin: 0 20px;
+    }
+
+    .buttons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px 20px;
+    }
+
+    .exam-btn {
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      background: #4da6ff;
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .exam-btn:hover {
+      background: #336fbf;
+    }
+    
+    .exam-btn.save {
+      background: #4da6ff;
+      color: #000;
+    }
+    
+    .exam-btn.save:hover {
+      background: #3399ff;
+    }
+    
+    .exam-btn.submit {
+      background: #4da6ff;
+    }
+    
+    .exam-btn.submit:hover {
+      background: #3399ff;
+    }
+    
+    .exam-btn.result {
+      background: #4da6ff;
+    }
+    
+    .exam-btn.result:hover {
+      background: #3399ff;
+    }
+    
+    .exam-btn.next {
+      background: #4da6ff;
+      color: #fff;
+    }
+    
+    .exam-btn.next:hover {
+      background: #3399ff;
+    }
+    
+    .exam-btn.reset {
+      background: #4da6ff;
+    }
+    
+    .exam-btn.reset:hover {
+      background: #3399ff;
+    }
+    
+    .exam-btn.reset-section {
+      background: #d35400;
+      font-size: 12px;
+      padding: 6px 10px;
+      min-width: auto;
+    }
+    
+    .exam-btn.reset-section:hover {
+      background: #e67e22;
+    }
+    
+    .exam-btn.no-match {
+      background: #95a5a6;
+      font-size: 12px;
+      padding: 6px 10px;
+      min-width: auto;
+      margin-top: 5px;
+    }
+    
+    .exam-btn.no-match:hover {
+      background: #7f8c8d;
+    }
+    
+    .exam-btn.no-match.selected {
+      background: #e74c3c;
+    }
+    
+    /* Top Tiles */
+    .top-tiles {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #1e3a5f;
+      border-bottom: 1px solid #0f223a;
+    }
+    
+    .tile {
+      flex: 1;
+      max-width: 180px;
+      text-align: center;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #3b4a63;
+      color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
+    }
+    
+    .tile:hover {
+      background: #4a5b78;
+    }
+    
+    .tile.active {
+      background: #ffffff;
+      color: #000;
+      border-color: #bbb;
+    }
+    
+    .tile.done {
+      background: #2ecc71;
+      color: #fff;
+      border-color: #27ae60;
+    }
+    
+    .tile.done::after {
+      content: " ✅";
+      margin-left: 5px;
+    }
+    
+    .tile .points {
+      background: rgba(255,255,255,0.2);
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+    
+    .tile.active .points {
+      background: #e9eefc;
+      color: #2c3e50;
+    }
+    
+    /* Container Styles */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 16px;
+      padding: 16px;
+      max-width: 1200px;
+      margin: 12px auto;
+    }
+    
+    .container-full {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 16px;
+      max-width: 1200px;
+      margin: 12px auto;
+    }
+    
+    .container-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 16px;
+      max-width: 1200px;
+      margin: 12px auto;
+    }
+    
+    .left-panel {
+      background: white;
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      max-height: 76vh;
+      overflow: auto;
+    }
+    
+    .left-panel .passage {
+      font-size: 14px;
+      color: #2c3e50;
+      line-height: 1.8;
+    }
+    
+    .left-panel h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .right-panel {
+      background: white;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 76vh;
+      overflow: auto;
+    }
+    
+    .main-panel {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      max-height: 76vh;
+      overflow: auto;
+    }
+    
+    .panel-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #1e3a5f;
+      font-weight: 700;
+    }
+    
+    /* Question Styles */
+    .question-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .question-body {
+      margin-top: 8px;
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .option {
+      background: #fbfdff;
+      border: 1px solid #e1e8f6;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .option:hover {
+      background: #f0f6ff;
+    }
+    
+    .option.selected {
+      background: #e8fbe9;
+      border-color: #2ecc71;
+    }
+    
+    .option .radio {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #cfdff6;
+      background: #fff;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    
+    .option.selected .radio {
+      background: #3498db;
+      border-color: #3498db;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.05);
+    }
+    
+    .text-container {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #e1e8f6;
+      border-radius: 8px;
+      background: #fbfdff;
+      position: relative;
+      min-height: 120px;
+    }
+    
+    .text-container:hover {
+      background: #f0f6ff;
+    }
+    
+    .text-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+    
+    .text-content {
+      font-size: 14px;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    
+    .title-slot {
+      min-height: 40px;
+      margin-top: 10px;
+      padding: 8px;
+      border: 2px dashed #c8d9f6;
+      border-radius: 6px;
+      background: #f8fbff;
+    }
+    
+    .title-slot.has-title {
+      background: #e8fbe9;
+      border-color: #2ecc71;
+    }
+    
+    .title-slot.has-x {
+      background: #f8d7da;
+      border-color: #e74c3c;
+      color: #c0392b;
+      font-weight: bold;
+    }
+    
+    .headings-bank {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 0;
+    }
+    
+    .heading-item {
+      padding: 10px;
+      border: 1px solid #dbe7fb;
+      border-radius: 8px;
+      background: #f8fbff;
+      cursor: grab;
+    }
+    
+    .heading-item:hover {
+      background: #e9f0ff;
+    }
+    
+    .heading-item.used {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    
+    .result-correct {
+      color: #27ae60;
+      font-weight: bold;
+    }
+    
+    .result-incorrect {
+      color: #c0392b;
+      font-weight: bold;
+    }
+    
+    .result-item {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      background: #f8f9fa;
+    }
+    
+    .instructions {
+      color: #7f8c8d;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .question-text {
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 15px;
+      color: #2c3e50;
+    }
+    
+    .all-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .question-block {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #e1e8f6;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+    
+    .texts-list, .situations-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .text-item, .situation-item {
+      padding: 15px;
+      border: 1px solid #e1e8f6;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+    
+    .text-letter {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    
+    .situation-number {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    
+    .fill-blank-container {
+      margin: 20px 0;
+    }
+    
+    .blank-word {
+      display: inline-block;
+      min-width: 120px;
+      padding: 4px 8px;
+      margin: 0 6px;
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid #dbe7fb;
+      border-radius: 4px;
+    }
+    
+    .blank-word.has-answer {
+      background: #e8fbe9;
+      border-color: #2ecc71;
+    }
+    
+    .options-popup {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #dbe7fb;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 100;
+      min-width: 150px;
+    }
+    
+    .option-item {
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #f0f4fb;
+    }
+    
+    .option-item:hover {
+      background: #f0f6ff;
+    }
+    
+    .option-item:last-child {
+      border-bottom: none;
+    }
+    
+    .horizontal-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .option-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px;
+      border: 1px solid #e1e8f6;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+    
+    .option-number {
+      font-weight: bold;
+      color: #2c3e50;
+      min-width: 30px;
+    }
+    
+    .option-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .option-btn {
+      padding: 8px 16px;
+      border: 1px solid #dbe7fb;
+      border-radius: 6px;
+      background: #f8fbff;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .option-btn:hover {
+      background: #e9f0ff;
+    }
+    
+    .option-btn.selected {
+      background: #3498db;
+      color: white;
+      border-color: #3498db;
+    }
+    
+    .word-bank-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .bank-word-vertical {
+      padding: 10px;
+      border: 1px solid #dbe7fb;
+      border-radius: 6px;
+      background: #f8fbff;
+      text-align: center;
+      cursor: grab;
+    }
+    
+    .bank-word-vertical.used {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f8d7da;
+      border-color: #f5c6cb;
+    }
+    
+    .blank-slot {
+      display: inline-block;
+      min-width: 100px;
+      padding: 4px 8px;
+      margin: 0 6px;
+      background: #fff;
+      min-height: 30px;
+      vertical-align: middle;
+      border: 1px solid #dbe7fb;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .blank-slot.has-answer {
+      background: #e8fbe9;
+      border-color: #2ecc71;
+    }
+    
+    .footer-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .situation-item.used {
+      opacity: 0.7;
+      cursor: not-allowed;
+      background: #f8d7da;
+      border-color: #f5c6cb;
+      color: #333;
+    }
+    
+    /* Listening Section Styles */
+    .listening-task {
+      margin-bottom: 10px;
+    }
+    
+    .true-false-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    
+    .true-false-table th {
+      background: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    
+    .true-false-table td {
+      padding: 15px;
+      border-bottom: 1px solid #e1e8f6;
+      vertical-align: top;
+    }
+    
+    .true-false-table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+    
+    .true-false-table tr:hover {
+      background: #e3f2fd;
+    }
+    
+    .answer-options {
+      display: flex;
+      gap: 25px;
+    }
+    
+    .answer-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background 0.2s;
+      font-weight: 500;
+    }
+    
+    .answer-option:hover {
+      background: #e3f2fd;
+    }
+    
+    .answer-option input {
+      margin: 0;
+      transform: scale(1.2);
+    }
+
+    .correct-answer {
+      background: #d4edda !important;
+      border-left: 4px solid #28a745;
+    }
+    
+    .incorrect-answer {
+      background: #f8d7da !important;
+      border-left: 4px solid #dc3545;
+    }
+    
+    /* Writing Section Styles */
+    .writing-task {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #e1e8f6;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+    
+    .writing-prompt {
+      font-size: 14px;
+      color: #2c3e50;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    
+    .writing-requirements {
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 4px solid #3498db;
+      margin-bottom: 15px;
+    }
+    
+    .writing-requirements h4 {
+      margin: 0 0 8px 0;
+      color: #2c3e50;
+    }
+    
+    .writing-requirements ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .writing-requirements li {
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+    
+    .writing-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .writing-textarea {
+      flex: 1;
+      min-height: 500px;
+      padding: 15px;
+      border: 2px solid #e1e8f6;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 1.6;
+      resize: vertical;
+      font-family: Arial, sans-serif;
+    }
+    
+    .writing-textarea:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+    
+    .word-counter {
+      margin-top: 10px;
+      text-align: right;
+      font-size: 13px;
+      color: #7f8c8d;
+      padding: 8px 0;
+    }
+    
+    .word-counter .count {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    
+    /* Results Page Styles */
+    .results-body {
+      background: #f7fafc;
+      color: #0f1724;
+      line-height: 1.6;
+    }
+    
+    .results-header {
+      background: #1e3a5f;
+      color: #fff;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .results-logo {
+      background: #fff;
+      color: #1e3a5f;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+    
+    .results-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    .results-container {
+      max-width: 1100px;
+      margin: 22px auto;
+      padding: 20px;
+    }
+    
+    .results-tiles {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0;
+    }
+    
+    .results-tile {
+      flex: 1;
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+      border-left: 6px solid #1e3a5f;
+    }
+    
+    .results-tile h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #1e3a5f;
+    }
+    
+    .results-tile .score {
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    
+    .section-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    
+    .section-table th,
+    .section-table td {
+      padding: 8px;
+      border-bottom: 1px solid #e6eef8;
+      text-align: left;
+      font-size: 14px;
+    }
+    
+    .summary {
+      background: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .summary .left {
+      font-weight: 700;
+    }
+    
+    .summary .right {
+      text-align: right;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    
+    .results-btn {
+      background: #4da6ff;
+      border: none;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .results-btn:hover {
+      background: #3a8ce0;
+    }
+    
+    .button-like {
+      text-decoration: none;
+    }
+    
+    .small-muted {
+      color: #6b7280;
+      font-size: 13px;
+    }
+    
+    input[type="number"] {
+      width: 90px;
+      padding: 8px;
+      border: 1px solid #d7e6fb;
+      border-radius: 6px;
+    }
+    
+    .note {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+    
+    /* Footer */
+    footer.controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: white;
+      border-top: 1px solid #e1e8f6;
+      margin-top: 20px;
+    }
+    
+    .status {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+    
+    .ghost {
+      background: transparent;
+      border: 2px solid #2c3e50;
+      color: #2c3e50;
+    }
+    
+    .ghost:hover {
+      background: #2c3e50;
+      color: white;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 980px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+      
+      .container-split {
+        grid-template-columns: 1fr;
+      }
+      
+      .right-panel {
+        order: 2;
+      }
+      
+      .top-tiles {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+      
+      header.topbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+      
+      .buttons-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .answer-options {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      footer.controls {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .results-tiles {
+        flex-direction: column;
+      }
+      
+      .summary {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      
+      .controls {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .start-content {
+        padding: 25px 20px;
+      }
+      
+      h1 {
+        font-size: 28px;
+      }
+      
+      .card {
+        padding: 20px 15px;
+      }
+    }
+
+    /* === تحسينات خاصة للهواتف الصغيرة جدا === */
+    @media (max-width: 480px) {
+      /* 1. تحسين الحاويات الرئيسية */
+      .container, .container-split, .container-full {
+        grid-template-columns: 1fr !important;
+        padding: 8px !important;
+        gap: 10px !important;
+      }
+      
+      /* 2. جعل اللوحات (panels) تأخذ عرض كامل */
+      .left-panel, .right-panel, .main-panel {
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin-bottom: 10px;
+      }
+      
+      /* 3. تحسين الهيدر */
+      .topbar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 10px !important;
+      }
+      
+      .brand {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      
+      /* 4. تحسين الأزرار في الهيدر */
+      .buttons-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+      }
+      
+      .exam-btn {
+        width: 100% !important;
+        margin: 2px 0 !important;
+        font-size: 14px !important;
+        padding: 12px 8px !important;
+      }
+      
+      /* 5. تحسين التايلات */
+      .top-tiles {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .tile {
+        flex: 0 0 calc(33% - 5px) !important;
+        max-width: calc(33% - 5px) !important;
+        margin: 2px;
+        font-size: 11px !important;
+        padding: 8px 4px !important;
+      }
+      
+      /* 6. تحسين النصوص */
+      .passage, .text-content, .question-text {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* 7. تحسين الخيارات */
+      .option {
+        padding: 12px 10px !important;
+        margin: 4px 0 !important;
+      }
+      
+      /* 8. تحسين جداول True/False */
+      .true-false-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      
+      /* 9. تحسين منطقة الكتابة */
+      .writing-textarea {
+        min-height: 300px !important;
+        font-size: 16px !important;
+      }
+      
+      /* 10. تحسين الفوتر */
+      footer.controls {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+      
+      .footer-buttons {
+        width: 100%;
+        display: flex;
+        gap: 5px;
+      }
+      
+      .footer-buttons .exam-btn {
+        flex: 1;
+      }
+      
+      /* 11. تحسين النتائج */
+      .results-tiles {
+        flex-direction: column !important;
+      }
+      
+      .results-tile {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* === تحسينات للهواتف المتوسطة === */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .container, .container-split {
+        grid-template-columns: 1fr !important;
+      }
+      
+      .tile {
+        max-width: 180px !important;
+      }
+    }
+  </style>
+</head>
+<body id="body">
+  <!-- Start Page -->
+  <div id="start-page" class="start-container">
+    <div class="start-content">
+      <div class="logo">
+        <div class="logo-icon">📝</div>
+        <h1>Deutsch B2 Prüfung</h1>
+        <div class="subtitle">Inseln – Lesen, Hören, Schreiben</div>
+      </div>
+      <div class="card">
+        <h2>Prüfungsbereich auswählen</h2>
+        <p>Wählen Sie bitte den Bereich aus, den Sie üben möchten. Die Prüfung startet automatisch in <span id="time-display">30</span> Sekunden.</p>
+        <select id="sectionSelect">
+          <option value="lesen">Lesen</option>
+          <option value="hoeren">Hören</option>
+          <option value="schreiben">Schreiben</option>
+        </select>
+        <div class="button-container">
+          <button id="cancelBtn" class="btn">Abbrechen</button>
+          <button id="startBtn" class="btn">Jetzt starten</button>
+        </div>
+      </div>
+      <div class="timer-container">
+        <div class="timer-label">Die Prüfung startet in:</div>
+        <div class="timer" id="countdown">30</div>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+      <div class="info-text">Stellen Sie sicher, dass Sie in einer ruhigen Umgebung sind und genügend Zeit haben.</div>
+    </div>
+  </div>
+
+  <!-- Lesen Page -->
+  <div id="lesen-page" class="exam-page" style="display: none;">
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="logo">test</div>
+        <div class="meta">
+          <div class="main-title">Deutsch - B2 (Übung)</div>
+          <div class="sub-title">Lesen — Inseln</div>
+        </div>
+      </div>
+
+      <div id="timer-lesen" class="timer" aria-live="polite">Verbleibende Zeit: 90:00</div>
+
+      <div class="buttons-grid">
+        <button id="resetBtn-lesen" class="exam-btn reset">🔄 Von neu beginnen</button>
+        <button id="saveBtn-lesen" class="exam-btn save">📋 Speichern</button>
+        <button id="resultBtn-lesen" class="exam-btn result">📊 Ergebnis</button>
+        <button id="submitBtn-lesen" class="exam-btn submit">🏁 Abgabe</button>
+        <button class="exam-btn next" id="nextBtn-lesen">➡️ Nächste Prüfung</button>
+      </div>
+    </header>
+
+    <div class="top-tiles" id="topTiles-lesen" role="navigation" aria-label="Sections overview"></div>
+
+    <div class="container">
+      <main class="left-panel" id="leftPanel-lesen">
+        <div class="passage" id="passage-lesen">
+          <h2 id="passageTitle-lesen">Aufgabe</h2>
+          <div id="passageContent-lesen"></div>
+        </div>
+      </main>
+
+      <aside class="right-panel" id="rightPanel-lesen" aria-labelledby="questionTitle-lesen">
+        <div class="question-head">
+          <div>
+            <div id="sectionName-lesen" style="font-weight:800"></div>
+            <div id="questionTitle-lesen" style="font-size:13px;color:#55607a">Frage</div>
+          </div>
+          <button id="resetSectionBtn-lesen" class="exam-btn reset-section" style="display:none;">Teil zurücksetzen</button>
+        </div>
+        <div class="question-body" id="questionBody-lesen"></div>
+        <div id="headingsBankContainer-lesen"></div>
+      </aside>
+    </div>
+
+    <footer class="controls">
+      <div class="footer-buttons">
+        <button id="prevBtn-lesen" class="exam-btn ghost">Zurück</button>
+        <button id="nextBtn-lesen" class="exam-btn ghost">Weiter</button>
+      </div>
+      <div class="status"><span id="statusText-lesen">Nicht gespeichert</span></div>
+    </footer>
+  </div>
+
+  <!-- Hören Page -->
+  <div id="hoeren-page" class="exam-page" style="display: none;">
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="logo">test</div>
+        <div class="meta">
+          <div class="main-title">Deutsch - B2 (Übung)</div>
+          <div class="sub-title">Hörverstehen — Inseln</div>
+        </div>
+      </div>
+
+      <div id="timer-hoeren" class="timer" aria-live="polite">Verbleibende Zeit: 17:00</div>
+
+      <div class="buttons-grid">
+        <button id="resetBtn-hoeren" class="exam-btn reset">🔄 Von neu beginnen</button>
+        <button id="saveBtn-hoeren" class="exam-btn save">📋 Speichern</button>
+        <button id="resultBtn-hoeren" class="exam-btn result">📊 Ergebnis</button>
+        <button id="submitBtn-hoeren" class="exam-btn submit">🏁 Abgabe</button>
+        <button class="exam-btn next" id="nextBtn-hoeren">➡️ Nächste Prüfung</button>
+      </div>
+    </header>
+
+    <div class="top-tiles" id="topTiles-hoeren" role="navigation" aria-label="Sections overview"></div>
+
+    <div class="container-full">
+      <main class="main-panel" id="mainPanel-hoeren">
+        <div id="contentContainer-hoeren"></div>
+      </main>
+    </div>
+
+    <footer class="controls">
+      <div class="footer-buttons">
+        <button id="prevBtn-hoeren" class="exam-btn ghost">Zurück</button>
+        <button id="nextBtn-hoeren" class="exam-btn ghost">Weiter</button>
+      </div>
+      <div class="status"><span id="statusText-hoeren">Nicht gespeichert</span></div>
+    </footer>
+  </div>
+
+  <!-- Schreiben Page -->
+  <div id="schreiben-page" class="exam-page" style="display: none;">
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="logo">test</div>
+        <div class="meta">
+          <div class="main-title">Deutsch - B2 (Übung)</div>
+          <div class="sub-title">Schreiben — Inseln</div>
+        </div>
+      </div>
+
+      <div id="timer-schreiben" class="timer" aria-live="polite">Verbleibende Zeit: 30:00</div>
+
+      <div class="buttons-grid">
+        <button id="resetBtn-schreiben" class="exam-btn reset">🔄 Von neu beginnen</button>
+        <button id="saveBtn-schreiben" class="exam-btn save">📋 Speichern</button>
+        <button id="resultBtn-schreiben" class="exam-btn result">📊 Ergebnis</button>
+        <button id="submitBtn-schreiben" class="exam-btn submit">🏁 Abgabe</button>
+        <button class="exam-btn next" id="nextBtn-schreiben">➡️ Nächste Prüfung</button>
+      </div>
+    </header>
+
+    <div class="top-tiles" id="topTiles-schreiben" role="navigation" aria-label="Sections overview"></div>
+
+    <div class="container-split">
+      <main class="left-panel" id="leftPanel-schreiben">
+        <div class="passage" id="passage-schreiben">
+          <h2 id="passageTitle-schreiben">Aufgabe</h2>
+          <div id="passageContent-schreiben"></div>
+        </div>
+      </main>
+
+      <aside class="right-panel" id="rightPanel-schreiben">
+        <div id="writingContainer-schreiben"></div>
+      </aside>
+    </div>
+
+    <footer class="controls">
+      <div class="footer-buttons">
+        <button id="prevBtn-schreiben" class="exam-btn ghost">Zurück</button>
+        <button id="nextBtn-schreiben" class="exam-btn ghost">Weiter</button>
+      </div>
+      <div class="status"><span id="statusText-schreiben">Nicht gespeichert</span></div>
+    </footer>
+  </div>
+
+  <!-- Ergebnisse Page -->
+  <div id="ergebnisse-page" class="results-page" style="display: none;">
+    <header class="results-header">
+      <div class="results-logo">test</div>
+      <div class="results-title">Gesamtergebnis — Deutsch B2 Inseln</div>
+    </header>
+
+    <div class="results-container">
+      <div class="results-tiles" id="topTiles-ergebnisse"></div>
+      <div id="details-ergebnisse"></div>
+      <div class="summary" id="finalSummary-ergebnisse"></div>
+      <div class="controls">
+        <a class="button-like" href="#" id="backBtn-ergebnisse">
+          <button class="results-btn">🔁 Zurück zur Startseite</button>
+        </a>
+        <button id="calcBtn-ergebnisse" class="results-btn">✅ Ergebnisse anzeigen</button>
+      </div>
+      <div class="note">Hinweis: Schreiben (45 Punkte) wird manuell eingegeben, falls nicht automatisch vorhanden.</div>
+    </div>
+  </div>
+
+  <script>
+    // ===== PAGE NAVIGATION =====
+    function showPage(pageId) {
+      // Hide all pages
+      document.getElementById('start-page').style.display = 'none';
+      document.getElementById('lesen-page').style.display = 'none';
+      document.getElementById('hoeren-page').style.display = 'none';
+      document.getElementById('schreiben-page').style.display = 'none';
+      document.getElementById('ergebnisse-page').style.display = 'none';
+      
+      // Change body class based on page
+      document.getElementById('body').className = '';
+      if (pageId === 'ergebnisse-page') {
+        document.getElementById('body').className = 'results-body';
+      } else if (pageId !== 'start-page') {
+        document.getElementById('body').className = 'exam-body';
+      }
+      
+      // Show selected page
+      document.getElementById(pageId).style.display = 'block';
+      
+      // Initialize the page if needed
+      if (pageId === 'lesen-page' && typeof initLesenPage === 'function') {
+        initLesenPage();
+      } else if (pageId === 'hoeren-page' && typeof initHoerenPage === 'function') {
+        initHoerenPage();
+      } else if (pageId === 'schreiben-page' && typeof initSchreibenPage === 'function') {
+        initSchreibenPage();
+      } else if (pageId === 'ergebnisse-page' && typeof initErgebnissePage === 'function') {
+        initErgebnissePage();
+      }
+    }
+
+    // ===== START PAGE FUNCTIONALITY =====
+    let initialCounter = 30;
+    let counter = initialCounter;
+    let countdownInterval;
+    let countdownRunning = false;
+    let examStarted = false;
+    const timerEl = document.getElementById("countdown");
+    const timeDisplayEl = document.getElementById("time-display");
+    const progressEl = document.getElementById("progress");
+    const selectEl = document.getElementById("sectionSelect");
+    const startBtn = document.getElementById("startBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    function startCountdown() {
+      // prevent double-starts or starting after exam already began
+      if (countdownRunning || examStarted) return;
+      countdownRunning = true;
+      // disable start button while counting
+      try { startBtn.disabled = true; startBtn.setAttribute('aria-disabled','true'); } catch(e){}
+      // reset counter & UI
+      counter = initialCounter;
+      timerEl.textContent = counter;
+      timeDisplayEl.textContent = counter;
+      progressEl.style.transform = "scaleX(0)";
+      timerEl.style.color = "";
+
+      countdownInterval = setInterval(() => {
+        counter--;
+        timerEl.textContent = counter;
+        timeDisplayEl.textContent = counter;
+        const progressValue = (initialCounter - counter) / initialCounter;
+        progressEl.style.transform = `scaleX(${progressValue})`;
+        if (counter <= 0) {
+          clearInterval(countdownInterval);
+          countdownInterval = null;
+          countdownRunning = false;
+          progressEl.style.transform = "scaleX(1)";
+          // ensure exam starts only once
+          if (!examStarted) {
+            examStarted = true;
+            startExam();
+          }
+          // safety: re-enable start button (page usually navigates away)
+          try { startBtn.disabled = false; startBtn.removeAttribute('aria-disabled'); } catch(e){}
+        }
+      }, 1000);
+    }
+
+    function stopCountdown(reset = true) {
+      if (countdownInterval) {
+        clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+      countdownRunning = false;
+      try { startBtn.disabled = false; startBtn.removeAttribute('aria-disabled'); } catch(e){}
+      progressEl.style.transform = "scaleX(0)";
+      if (reset) {
+        counter = initialCounter;
+        timerEl.textContent = counter;
+        timeDisplayEl.textContent = counter;
+      } else {
+        timerEl.textContent = "Gestoppt";
+      }
+    }
+
+    function startExam() {
+      // guard to ensure startExam is triggered once
+      if (!examStarted) examStarted = true;
+      const selectedSection = selectEl.value;
+      if (selectedSection === 'lesen') {
+        showPage('lesen-page');
+      } else if (selectedSection === 'hoeren') {
+        showPage('hoeren-page');
+      } else if (selectedSection === 'schreiben') {
+        showPage('schreiben-page');
+      }
+    }
+
+    // wire buttons: start will now start the countdown (not the exam directly)
+    startBtn.addEventListener('click', startCountdown);
+
+    cancelBtn.addEventListener('click', () => {
+      stopCountdown(true);
+      timerEl.textContent = "Abgebrochen";
+      timerEl.style.color = "#e53e3e";
+    });
+
+    // ===== KORREKTE ANTWORTEN (ZENTRAL) =====
+    const CORRECT_ANSWERS = {
+      lesen: {
+        // Teil 1: Überschriften zuordnen
+        "text1": "e",
+        "text2": "b", 
+        "text3": "i",
+        "text4": "c",
+        "text5": "j",
+        
+        // Teil 2: Fragen zum Text
+        "s2q1": "s2q1o1",
+        "s2q2": "s2q2o1",
+        "s2q3": "s2q3o3",
+        "s2q4": "s2q4o2",
+        "s2q5": "s2q5o1",
+        
+        // Teil 3: Texte zuordnen
+        "11": "L",
+        "12": "I",
+        "13": "B",
+        "14": "H",
+        "15": "X",
+        "16": "E",
+        "17": "A",
+        "18": "D",
+        "19": "F",
+        "20": "X",
+        
+        // Sprachbausteine Teil 1
+        "21": "um",
+        "22": "ob",
+        "23": "aber",
+        "24": "unbedingt",
+        "25": "mich",
+        "26": "als",
+        "27": "kommenden",
+        "28": "dazu",
+        "29": "sondern",
+        "30": "für",
+        
+        // Sprachbausteine Teil 2
+        "31": "KAUM",
+        "32": "AUF",
+        "33": "VORBEI",
+        "34": "STATT",
+        "35": "INNERHALB",
+        "36": "MÜSSEN",
+        "37": "AN",
+        "38": "SOLLEN",
+        "39": "DANN",
+        "40": "DENN"
+      },
+      
+      hoeren: {
+        // Hören Teil 1
+        "41": "falsch",
+        "42": "falsch",
+        "43": "falsch",
+        "44": "richtig",
+        "45": "richtig",
+        
+        // Hören Teil 2
+        "46": "falsch",
+        "47": "richtig",
+        "48": "richtig",
+        "49": "richtig",
+        "50": "falsch",
+        "51": "falsch",
+        "52": "richtig",
+        "53": "falsch",
+        "54": "richtig",
+        "55": "richtig",
+        
+        // Hören Teil 3
+        "56": "richtig",
+        "57": "falsch",
+        "58": "falsch",
+        "59": "falsch",
+        "60": "richtig"
+      }
+    };
+
+    // ===== HILFSFUNKTIONEN =====
+    function getHeadingText(headingId) {
+      if (!headingId || headingId === '-' || headingId === '') return '-';
+      const headings = {
+        "a": "Deutscher Forscher startet Expedition auf Vogelinsel in Südamerika",
+        "b": "Die beliebtesten Reiseziele unter den europäischen Inseln",
+        "c": "Fernreisen in eine unberührte Tierwelt",
+        "d": "Geführte Bootsausflüge zu einsamen Badebuchten",
+        "e": "Grüne Geisterinsel in Asien",
+        "f": "Immer mehr Reiseunternehmen streichen Thailand aus ihrem Angebot",
+        "g": "Inseln zählen weltweit zu den wichtigsten Reisedestinationen",
+        "h": "Nachhaltiger Tourismus auf chinesischen Inseln",
+        "i": "Tierparadies auf einer Nordseeinsel",
+        "j": "Umstrittener Umgang mit Tieren als Touristenmagnet"
+      };
+      return headings[headingId] || headingId;
+    }
+
+    function getOptionText(questionId, optionId) {
+      if (!optionId || optionId === '-' || optionId === '') return '-';
+      const options = {
+        "s2q1o1": "sind in der Milchproduktion beliebter als andere Rinderrassen.",
+        "s2q1o2": "spielen in der Milchproduktion kaum eine Rolle.",
+        "s2q1o3": "stammen aus Norddeutschland.",
+        "s2q2o1": "hat bereits einige Preise gewonnen.",
+        "s2q2o2": "war Siegerin bei einer Veranstaltung in Italien.",
+        "s2q2o3": "wurde als schönste Kuh Europas ausgezeichnet.",
+        "s2q3o1": "bekam Krista ein Kalb.",
+        "s2q3o2": "wäre Krista fast gestorben.",
+        "s2q3o3": "wurde Krista operiert.",
+        "s2q4o1": "betreffen die Familie Seeger nicht.",
+        "s2q4o2": "sind eine Folge des Verbraucherverhaltens.",
+        "s2q4o3": "werden im Film ausführlich behandelt.",
+        "s2q5o1": "begeistert Kinobetreiber bislang nicht.",
+        "s2q5o2": "konnte die Kritiker nicht überzeugen.",
+        "s2q5o3": "wurde als beste Dokumentation ausgezeichnet."
+      };
+      return options[optionId] || optionId;
+    }
+
+    function getSituationText(id) {
+      const situations = {
+        "11": "Ein Bekannter möchte einen Film sehen, der nach dem Werk eines Schriftstellers gedreht wurde.",
+        "12": "Bekannte interessieren sich für Wintersportveranstaltungen.",
+        "13": "Sie suchen eine Musiksendung. Sie mögen besonders Klaviermusik.",
+        "14": "Sie mögen Filme mit viel Action und viel Spaß. Ihre Lieblingshelden können auch mal zuschlagen.",
+        "15": "Ein Bekannter interessiert sich für kurdische Geschichte.",
+        "16": "Sie mögen Familienkomödien, besonders mit frechen Kindern.",
+        "17": "Eine Bekannte interessiert sich für die Geschichte des bis 1989 geteilten Berlins.",
+        "18": "Sie sehen gern spannende, aber أيضا spaßige Agentenfilme.",
+        "19": "Sie würden gern etwas über Großstadtjugendliche erfahren, die am Rand der Gesellschaft leben.",
+        "20": "Sie möchten im nächsten Urlaub tauchen und sich über die Risiken informieren."
+      };
+      return situations[id] || id;
+    }
+
+    function escapeHtml(s) {
+      if (s === null || s === undefined) return '';
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function normalizeAnswer(a) {
+      if (a === null || a === undefined || a === '') return '-';
+      let s = String(a).trim();
+      if (s === '') return '-';
+      const low = s.toLowerCase();
+      if (["richtig", "true", "yes", "ja", "wahr"].includes(low)) return 'richtig';
+      if (["falsch", "false", "no", "nein", "unwahr"].includes(low)) return 'falsch';
+      if (s === 'X' || s === 'x') return 'X';
+      return s;
+    }
+
+    // ===== LESEN PAGE FUNCTIONALITY =====
+    function initLesenPage() {
+      /* ===== Self-contained exam (embedded) ===== */
+      const exam = {
+        id: "exam-001",
+        durationSec: 90 * 60,
+        sections: [
+          { 
+            id: "s1", 
+            title: "Leseverstehen, Teil 1", 
+            points: 25,
+            passageTitle: "Aufgabe: Ziehen Sie die passenden Überschriften auf die Texte.",
+            passage: "",
+            questions: [],
+            texts: [
+              {
+                id: "text1",
+                content: "Die Shengsi-Inseln liegen im Ostchinesischen Meer. Nicht einmal 20 der rund 400 Inseln sind bewohnt, und manche, auf denen einst Menschen lebten, wurden wieder verlassen. Ein altes Dorf auf der nun unbewohnten Insel Shengsan ist zu einer Sehenswürdigkeit geworden. Die Einwohner haben das ehemalige Fischerdorf auf der viereinhalb Quadratkilometer großen Insel längst verlassen. Sie sind aus wirtschaftlichen Gründen auf das Festland gezogen. Dort ist es für sie leichter, ihren Fischfang zu verarbeiten und zu verkaufen. Das Dorf aber, das sie zurückgelassen haben, ist in kürzester Zeit von der Natur zurückerobert worden. Farne und Gräser überwuchern Häuser und Wege. Die Grenzen zwischen den von Menschenhand geschaffenen Gebäuden und dem umgebenden Urwald verschwinden: Mauerwerk, von wildem Wein überwuchert; Grün, so weit das Auge reicht. An diesem Ort lebt keine Menschenseele mehr.",
+                correctAnswer: "e"
+              },
+              {
+                id: "text2", 
+                content: "Der Reiseveranstalter TOURIMARS hat kürzlich eine Befragung durchgeführt. Er wollte wissen, welche Inseln in Europa unter Reisenden besonders populär sind. Nach dieser Umfrage führt die griechische Insel Santorin die Liste an. Auf Platz zwei steht Madeira, die grüne Insel im Atlantik. Mit Kreta und Zakynthos schaffen es an dritter und vierter Stelle noch zwei weitere griechische Inseln in die Liste - übrigens wird die Attraktivität griechischer Inseln auch in anderen Umfragen bestätigt. Platz fünf nimmt die Badeinsel Fuerteventura ein. Rang sechs kommt der britischen Kanalinsel Jersey zu. Mallorca folgt auf Platz sieben, gefolgt von der italienischen Insel Capri und der Kanareninsel Teneriffa. Gerade noch in die Top Ten schaffte es auch die französische Mittelmeerinsel Korsika, die sowohl für Wanderer als auch für Badeurlauber interessant ist. Für die Umfrage waren Erfahrungsberichte von Urlaubern über einen Zeitraum von 12 Monaten ausgewertet worden. Sie bewerteten dabei die Hotels, Restaurants und Sehenswürdigkeiten der besuchten Insel.",
+                correctAnswer: "b"
+              },
+              {
+                id: "text3",
+                content: "Das ostfriesische Memmert ist für seltene Vögel reserviert. Auf der Düneninsel, die vor ein paar Jahrhunderten aus der Nordsee auftauchte, leben Zigtausende von Vögeln. Nur der Inselvogt lebt zeitweise dort. Von Anfang März bis Ende Oktober ist der Forscher das einzige menschliche Wesen auf der kleinen Vogelschutzinsel im Wattenmeer. Im Auftrag des Landes Niedersachsen ist der Inselvogt zuständig für den Schutz von Natur und Vögeln auf Memmert. Von Mai bis Ende Juli ist Brutzeit auf der Insel. 100.000 Tiere, Vertreter von 60 verschiedenen Vogelarten, kommen Jahr für Jahr zum Brüten nach Memmert. Während dieser Zeit besteht ein absolutes Betretungsverbot - ausgenommen für Personen, die in Seenot geraten sind oder eine schriftliche Genehmigung haben. Ab August, dem Ende der Brutzeit, haben auch Urlauber für kurze Zeit die Chance auf einen Besuch, aber ausschließlich im Rahmen einer geführten Expedition. Nur mit einem Experten dürfen sie die Düneninsel im Wattenmeer erkunden.",
+                correctAnswer: "i"
+              },
+              {
+                id: "text4",
+                content: "Die südamerikanischen Galapagosinseln locken nicht mit weißen Sandstränden und Palmen. Dennoch sind sie das Ziel so mancher Reisesehnsüchte. Für viele Menschen gelten die fernen Inseln als eine Art Paradies. Und tatsächlich kommt man wohl nirgendwo sonst ungezähmten Tieren so nahe wir auf diesen Inseln: Auf den unbewohnten Galapagosinseln verhalten sich die Tiere so, als ob keine Menschen gäbe. Für die Besucher genauso faszinierend wie für die Entdeckungsreisenden früherer Jahrhunderte ist dabei die Zutraulichkeit, die sich die Tiere durch das Fehlen von natürlichen Feinden auf den Inseln bewahrt haben. Man kann das ganze Jahr über zu den Galapagosinseln reisen. Die bewohnten Inseln kann man dabei ganz gut allein besuchen. Anders sieht es bei den unbewohnten Inseln aus. Hier lassen die Behörden seit einigen Jahren nur eine begrenzte Zahl an Schiffen zu, und ohne Führer ist das Betreten nicht erlaubt. Die Inseln und ihre Tiere bleiben sich selbst überlassen, damit das Naturparadies auch weiterhin erhalten bleibt.",
+                correctAnswer: "c"
+              },
+              {
+                id: "text5",
+                content: "Dass Elefanten in Thailand teurer sein können als ein 3er-BMW in München, liegt an ihrem enormen wirtschaftlichen Potenzial: Sie sind eine der Hauptattraktionen der thailändischen Tourismusindustrie. Jeder dritte Besucher des Landes möchte mit Elefanten in Kontakt kommen oder hat das bereits hinter sich, zeigt die Umfrage einer Tierschutzgruppe. Die Organisation schätzt, dass in dem Land mehr als 2000 Elefanten im Einsatz sind, um die Nachfrage der Urlauber zu bedienen - so viele wie in keinem anderen Land der Welt. Was für die Besitzer ein gutes Geschäft ist, steht immer häufiger bei Tierschützern in der Kritik: Elefantenreiten sei die grausamste Tierattraktion der Welt. Sie sprechen von einer lebenslangen Qual für die Elefanten. Mehr als 100 Reiseveranstalter haben solche Angebote schon aus den Katalogen gestrichen. Dies feiern Tierschützer als Sieg: \"Elefanten sind Wildtiere, keine Entertainer.\" Dass die Lebensbedingungen der Tourismuselefanten nicht artgerecht sind, ist bekannt. Doch selbst wenn sie nicht mehr als Einnahmequelle dienen, wird das an ihren Lebensumständen wenig ändern.",
+                correctAnswer: "j"
+              }
+            ],
+            headings: [
+              {id: "a", text: "Deutscher Forscher startet Expedition auf Vogelinsel in Südamerika"},
+              {id: "b", text: "Die beliebtesten Reiseziele unter den europäischen Inseln"},
+              {id: "c", text: "Fernreisen in eine unberührte Tierwelt"},
+              {id: "d", text: "Geführte Bootsausflüge zu einsamen Badebuchten"},
+              {id: "e", text: "Grüne Geisterinsel in Asien"},
+              {id: "f", text: "Immer mehr Reiseunternehmen streichen Thailand aus ihrem Angebot"},
+              {id: "g", text: "Inseln zählen weltweit zu den wichtigsten Reisedestinationen"},
+              {id: "h", text: "Nachhaltiger Tourismus auf chinesischen Inseln"},
+              {id: "i", text: "Tierparadies auf einer Nordseeinsel"},
+              {id: "j", text: "Umstrittener Umgang mit Tieren als Touristenmagnet"}
+            ]
+          },
+          { 
+            id: "s2", 
+            title: "Leseverstehen, Teil 2", 
+            points: 25,
+            passageTitle: "Krista - Die schönste Kuh Deutschlands",
+            passage: `Krista ist die schönste Kuh Deutschlands. Und jetzt auch noch ein Kinostar. Am letzten Donnerstag kam ein Film über die schwarz-weiß gefleckte Kuh und ihre Besitzer in einige norddeutsche Kinos. Wovon der Film handelt? Von Kristas Leben auf dem Hof der Familie Seeger in Bissel, einem kleinen Dorf in Norddeutschland.
+
+Antje Schneider und Carsten Waldbauer sind Filmemacher. Vor einigen Jahren hatten sie die Idee, eine Dokumentation über Kühe zu machen, genauer gesagt über Holstein-Rinder. Die Holstein-Rinder sind eine der wichtigsten Rinderrassen weltweit, kommen aber trotz des deutschen Namens aus Nordamerika. Diese Kühe werden überwiegend als Milchvieh gehalten. Die Holstein-Rinder sind so verbreitet, dass sie inzwischen andere Rassen fast vollständig verdrängt haben.
+
+Das gilt vor allem für die vielen Bauernhöfe in Deutschland, die ausschließlich Milch produzieren. Auf einem dieser Höfe wollten Antje Schneider und Carsten Waldbauer Aufnahmen für ihre Dokumentation machen, und die Wahl fiel auf den Hof der Familie Seeger. Doch als die beiden Filmemacher mit den Dreharbeiten beginnen wollten, sahen sie plötzlich Krista. Krista änderte alles. Die Schönheit vom Lande beeindruckte Schneider und Waldbauer so sehr, dass sie den Plan für ihre Dokumentation gegen den Willen ihres Senders komplett änderten. Im Mittelpunkt sollte nun Krista stehen, die schönste Holstein-Kuh Deutschlands.
+
+Krista gehört zur Welteilte. Auf Veranstaltungen wird sie immer wieder ausgezeichnet. Bei einer Tierschau in Italien erhielt sie zwar nicht den ersten Preis, aber trotzdem war sie unter den schönsten Kühen Europas. Kristas Besitzer Jörg Seeger ist begeistert von seinem Star im Stall.
+
+Jörg und Janine Seeger erlauben dem Kinozuschauer interessante Einblicke in ihren Alltag auf dem Bauernhof. Die Kamera verfolgt zwar immer den Weg von Kuh Krista, aber zu sehen ist dabei natürlich auch die Arbeit der gesamten Familie auf dem Hof. Manchmal ist das auch ein romantisches Leben, es ist aber vor allem immer sehr arbeitsreich.
+
+"Für meiner sind Kühe nicht nur Nutztiere", sagt die Bäuerin Janine Seeger. Schon als Kind hätten ihr die Tiere Geborgenheit, manchmal Trost gespendet. Aber sie weiß, dass die Kühe Geld bringen müssen, entweder durch möglichst viel Milch oder durch viel Nachwuchs. Die kleinen Kälber lassen sich zu recht guten Preisen verkaufen, das lohnt sich für die Seegers.
+
+Krista kann zunächst aus gesundheitlichen Gründen keine Kälber bekommen. Auch diese Problematik wird im Film gezeigt. Der Zuschauer merkt, dass Jörg Seeger enttäuscht ist: Seine beste Kuh kann kein Kalb bekommen. Aber es geht gut aus, denn Krista wird operiert und nach Ende der Dreharbeiten klappt es dann doch mit dem Nachwuchs für die Kuh.
+
+Während der jahrelangen Dreharbeiten hat sich auch die Familie entwickelt. Mittlerweile haben die Seegers zwei Kinder. "Deshalb verändert sich im Film mein Gewicht etwas", erzählt Janine Seeger und lacht. Und wie ist es so, vor der Kamera zu stehen? "Erst ungewohnt, dann irgendwie vertraut", sagt die 32-Jährige. Zu den Filmemachern habe sich ein freundschaftliches Verhältnis entwickelt. "Wie schön, Carsten und Antje sind wieder da", habe es dann nur noch geheißen, wenn das Team anrückte.
+
+Der Film zeigt aber auch, wie sich im Laufe der Jahre das Leben auf dem Hof der Seegers verändert hat und wie schwierig it auch hier geworden ist, mit Milchkühen Geld zu verdienen. Der Markt ist hart umkämpft und die Preise sinken immer weiter, denn die Verbraucher im Supermarkt greifen gerne zum günstigsten Produkt. Für viele ist es da nicht wichtig, wie die Milch produziert wurde. Auch das zeigt der Film, wenngleich eher nebenbei.
+
+Familie Seeger ist stolz drauf, dass ein Film über ihren Hof und über die schöne Kuh Krista gedreht wurde. So heißt nun übrigens auch der Film: "Die schöne Krista". Am vergangenen Wochenende haben die Seegers den Film bei einem Hoffest gezeigt. Familie und Freunde sowie Nachbarn waren zu Gast, und alle haben sich über den Film gefreut.
+
+"Die schöne Krista" ist auch in die Auswahl für den Deutschen Filmpreis gekommen, als einer der fünfzehn besten Dokumentarfilme. Die 500 Filmkritiker, die diese 15 Filme ausgewählt haben, waren begeistert. Schwieriger sei es, so die Produktionsfirma, die Kinobetreiber vom Film zu überzeugen. "Was sollen wir mit einer Kuh?", sei eine häufige Reaktion. Vielleicht würden sie ihre Meinung ändern, wenn Sie Krista einmal auf dem Hof gesehen hätten.`,
+            questions: [
+              {
+                id: "s2q1",
+                type: "single",
+                text: "Holstein-Rinder...",
+                options: [
+                  {id: "s2q1o1", text: "sind in der Milchproduktion beliebter als andere Rinderrassen."},
+                  {id: "s2q1o2", text: "spielen in der Milchproduktion kaum eine Rolle."},
+                  {id: "s2q1o3", text: "stammen aus Norddeutschland."}
+                ],
+                correctAnswer: "s2q1o1"
+              },
+              {
+                id: "s2q2",
+                type: "single", 
+                text: "Die Kuh Krista...",
+                options: [
+                  {id: "s2q2o1", text: "hat bereits einige Preise gewonnen."},
+                  {id: "s2q2o2", text: "war Siegerin bei einer Veranstaltung in Italien."},
+                  {id: "s2q2o3", text: "wurde als schönste Kuh Europas ausgezeichnet."}
+                ],
+                correctAnswer: "s2q2o1"
+              },
+              {
+                id: "s2q3",
+                type: "single",
+                text: "Während der Filmaufnahmen...",
+                options: [
+                  {id: "s2q3o1", text: "bekam Krista ein Kalb."},
+                  {id: "s2q3o2", text: "wäre Krista fast gestorben."},
+                  {id: "s2q3o3", text: "wurde Krista operiert."}
+                ],
+                correctAnswer: "s2q3o3"
+              },
+              {
+                id: "s2q4",
+                type: "single",
+                text: "Die wirtschaftlichen Probleme von Milchbetrieben...",
+                options: [
+                  {id: "s2q4o1", text: "betreffen die Familie Seeger nicht."},
+                  {id: "s2q4o2", text: "sind eine Folge des Verbraucherverhaltens."},
+                  {id: "s2q4o3", text: "werden im Film ausführlich behandelt."}
+                ],
+                correctAnswer: "s2q4o2"
+              },
+              {
+                id: "s2q5", 
+                type: "single",
+                text: '"Die schöne Krista"...',
+                options: [
+                  {id: "s2q5o1", text: "begeistert Kinobetreiber bislang nicht."},
+                  {id: "s2q5o2", text: "konnte die Kritiker nicht überzeugen."},
+                  {id: "s2q5o3", text: "wurde als beste Dokumentation ausgezeichnet."}
+                ],
+                correctAnswer: "s2q5o1"
+              }
+            ]
+          },
+          { 
+            id: "s3", 
+            title: "Leseverstehen, Teil 3", 
+            points: 25,
+            passageTitle: "Aufgabe: Lesen Sie die zehn Situationen (11-20) und die zwölf Texte (A-L). Welcher Text passt zu welcher Situation? Sie können jeden Text nur einmal verwenden. Manchما passt kein Text. Wählen Sie dann 'x'.",
+            passage: "",
+            questions: [],
+            texts: [
+              {id: "A", text: "23.15 3SAT Es geschah im August Ullrich Kasten und Hans-Hermann Hertle schildern in ihrer hervorragenden Dokumentation anhand von Archivmaterial minutiös sämtliche Stationen des Mauerbaus. Sie erzählen die Vorgeschichte der Berlin-Krise und beleuchten die Hintergründe der Teilung Deutschlands. Ferner haben sie Zeitzeugen nach ihren Reaktionen auf das einschneidende Ereignis befragt. Zu Wort kommen in dem Film nicht nur namhafte Vertreter der internationalen Politik, sondern auch Grenzsoldaten, Flüchtlinge und Angehörige von Maueropfern.", correctAnswer: "17"},
+              {id: "B", text: "21.00 NDR Joja Wendt Ob Klassik, Rock'n'Roll oder Jazz, Joja Wendt, Hamburger Pianist mit enormen Entertainer Qualitäten, variiert bekannte Songs und stellt seine Fingerfertigkeit auch in eigenen Kompositionen unter Beweis. Stargast in dem heutigen Fernseh-Special ist die Schlagersängerin Michelle mit dem Titel 'Ich schicke dir jetzt einen Engel'.", correctAnswer: "13"},
+              {id: "C", text: "20.15 SAT1 Einfach unwiderstehlich Gut kochen kann Amanda nicht. Folglich steht ihr kleines, von der Mutter geerbtes Restaurant in Manhattan kurz vor dem Aus. Da entflieht plötzlich ein Krebs aus ihrem Einkaufskorb und sorgt mit seinen Zauberkünsten für lukullische Sensationen. Tom, Manager eines Gourmet Restaurants an der Fifth Avenue, kommt als einer der ersten in deren Genuss. Amanda hat sich in ihn verliebt, als der schon bekannte Krebs unter Toms Hosenbein flüchtet. Seine Zauber-kräfte werden dringend gebraucht, denn Tom gehört zu den Männern, die ziemlich viel Angst vor Liebesbeziehungen haben.", correctAnswer: null},
+              {id: "D", text: "22.00 HR New York Express Aus Sorge um die nationale Sicherheit versteckt der amerikanische Geheimdienst den genialen, aber vermeintlich psychisch kranken Physiker Arthur Vincenti. Der völlig verrückte New Yorker Psychiater Dr. Snow erhält den Auftrag, ihn zu heilen. Immer nachts wird er mit verbundenen Augen zu dem Versteck gebracht. Aber auch einige Gangster sind nicht untätig. Sie haben es auf das Wissen des Geheimnisträgers Vincenti abgesehen, das sie fremden Spionen verkaufen möchten.", correctAnswer: "16"},
+              {id: "E", text: "20.15 PRO 7 Kein Vater von gestern Er schreit wie am Spieß, wenn er lange Hosen tragen soll, und lacht sich kaputt, wenn er die Katze in eine Mülltüte gesteckt hat. Alles ist einfacher, als sich um den 5-jährigen Calvin zu kümmern. Doch sein liebevoller Vater Russell, der den J gen allein erzieht, meistert sämtliche Katastrophen mit Bravour und Geduld. Weil sich Kind und Karriere nicht unter einen Hut bringen ließen, verlor der Jurist einen tollen Job in einer renommierten Chicagoer Anwaltskanzlei. Jetzt sitzt er mit seinem Sohn in einem Dorf in Kansas und arbeitet in der Kanzlei eines Freundes. Die Bekanntschaft mit der attraktiven Beth bringt neuen Schwung in sein Leben. Doch da taucht Russells Ex-Ehefrau wieder auf", correctAnswer: "14"},
+              {id: "F", text: "20.15 ZDF Der Preis der Schönheit Der 16-jährige Schüler Timo leidet unter seiner Figur. Er ist zu dick, um bei den Mädchen gut anzukommen. Deshalb beschließt er, eine Diät zu machen. Er will unbedingt abnehmen. Als er nach einiger Zeit tatsächlich 20 Kilo leichter ist, ist er überglücklich. Doch dann beginnt er, sich für viel zu dünn zu halten. Er will wieder zunehmen, schafft es aber nicht, normal zu essen. Er leidet an Magersucht und muss in eine Spezialklinik eingewiesen werden.", correctAnswer: "19"},
+              {id: "G", text: "23.30 WDR Die Nacht der Nächte Der Film erzählt die Geschichte von vier jungen Leuten, die in der Silvesternacht in Berlin unterwegs sind. Sie wollen das neue Jahr gebührend feiern. Doch die Nacht nimmt einen überraschenden Verlauf. Der Film zeigt, wie die vier jungen Leute in dieser Nacht ihr Leben für immer verändern. Es geht um Liebe, Freundschaft und die Suche nach dem Glück.", correctAnswer: null},
+              {id: "H", text: "21.45 RTL Der Unfall Auf der Autobahn bei Köln kommt es zu einem schweren Unfall. Ein LKW ist auf mehrere Pkws aufgefahren. Es gibt mehrere Verletzte. Die Rettungskräfte sind schnell vor Ort und kümmern sich um die Verletzten. Parallel dazu wird die Unfallursache untersucht. War es technisches Versagen oder menschliches Versagen? Die Ermittlungen laufen.", correctAnswer: "18"},
+              {id: "I", text: "22.30 PRO7 Die Insel Eine Gruppe von Jugendlichen strandet auf einer einsamen Insel. Sie müssen lernen, ohne Handy und ohne Comfort zu überleben. Schnell wird klar, dass nicht alle gleich gut mit der Situation zurechtkommen. Es bilden sich Grüppchen und Konflikte sind vorprogrammiert. Doch als einer der Jugendlichen schwer verletzt wird, müssen alle zusammenhalten, um zu überleben.", correctAnswer: "20"},
+              {id: "J", text: "19.30 KIKA Die Sendung mit der Maus Heute geht es in der Sendung mit der Maus um das Thema 'Feuer'. Wie entsteht Feuer? Wie kann man es löschen? Und warum is Feuer so wichtig für uns Menschen? Die Maus besucht eine Feuerwache und schaut den Feuerwehrleuten bei der Arbeit zu. Außerdem gibt es wie immer die Lach- und Sachgeschichten.", correctAnswer: "11"},
+              {id: "K", text: "23.00 ARTE Die Kunst des Scheiterns Der Film porträtiert drei Menschen, die in ihrem Leben gescheitert sind. Eine Unternehmerin, deren Firma pleite ging, ein Sportler, der wegen einer Verletzung seine Karriere beenden musste, und eine Künstlerin, die nie den Durchbruch schaffte. Der Film zeigt, wie sie mit ihrem Scheitern umgehen und was sie daraus gelernt haben. Es ist eine Hommage an die Widerstandskraft des menschlichen Geistes.", correctAnswer: "15"},
+              {id: "L", text: "21.00 VOX Kitchen Impossible Sternekoch Tim Mälzer stellt sich heute einer besonderen Herausforderung. Er muss in einer fremden Küche ohne seine gewohnten Utensilien ein Drei-Gänge-Menü zubereiten. Die Zutaten bekommt er erst kurz vor Beginn der Sendung. Schaffen er und sein Team es, pünktlich ein perfektes Menü auf den Tisch zu bringen? Die Spannung ist garantiert.", correctAnswer: "12"}
+            ],
+            situations: [
+              {id: "11", text: "Ein Bekannter möchte einen Film sehen, der nach dem Werk eines Schriftstellers gedreht wurde."},
+              {id: "12", text: "Bekannte interessieren sich für Wintersportveranstaltungen."},
+              {id: "13", text: "Sie suchen eine Musiksendung. Sie mögen besonders Klaviermusik."},
+              {id: "14", text: "Sie mögen Filme mit viel Action und viel Spaß. Ihre Lieblingshelden können auch mal zuschlagen."},
+              {id: "15", text: "Ein Bekannter interessiert sich für kurdische Geschichte."},
+              {id: "16", text: "Sie mögen Familienkomödien, besonders mit frechen Kindern."},
+              {id: "17", text: "Eine Bekannte interessiert sich für die Geschichte des bis 1989 geteilten Berlins."},
+              {id: "18", text: "Sie sehen gern spannende, aber auch spaßige Agentenfilme."},
+              {id: "19", text: "Sie würden gern etwas über Großstadtjugendliche erfahren, die am Rand der Gesellschaft leben."},
+              {id: "20", text: "Sie möchten im nächsten Urlaub tauchen und sich über die Risiken informieren."}
+            ]
+          },
+          { 
+            id: "s4", 
+            title: "Sprachbausteine, Teil 1", 
+            points: 15,
+            passageTitle: "Aufgabe: Ergänzen Sie den Text. Wählen Sie für jede Lücke das passende Wort.",
+            passage: "",
+            questions: [],
+            fillBlanks: [
+              {
+                id: "21",
+                options: ["anstatt", "ohne", "um"],
+                correctAnswer: "um"
+              },
+              {
+                id: "22",
+                options: ["dass", "ob", "während"],
+                correctAnswer: "dass"
+              },
+              {
+                id: "23",
+                options: ["aber", "denn", "und"],
+                correctAnswer: "aber"
+              },
+              {
+                id: "24",
+                options: ["bestimmt", "unbedingt", "völlig"],
+                correctAnswer: "unbedingt"
+              },
+              {
+                id: "25",
+                options: ["dich", "mich", "sich"],
+                correctAnswer: "mich"
+              },
+              {
+                id: "26",
+                options: ["als", "wenn", "wie"],
+                correctAnswer: "als"
+              },
+              {
+                id: "27",
+                options: ["baldigen", "kommenden", "vergangenen"],
+                correctAnswer: "kommenden"
+              },
+              {
+                id: "28",
+                options: ["danach", "darüber", "dazu"],
+                correctAnswer: "dazu"
+              },
+              {
+                id: "29",
+                options: ["aber", "oder", "sondern"],
+                correctAnswer: "sondern"
+              },
+              {
+                id: "30",
+                options: ["für", "gegen", "ohne"],
+                correctAnswer: "für"
+              }
+            ],
+            fillText: `Hallo Ferdinand,
+
+nun habe ich mich schon so lange nicht bei dir gemeldet – das tut mir wirklich leid! Ich hatte in den vergangenen Monaten viel Stress, weil ich ja nun studiere und nebenbei noch arbeiten muss, ________ meine Miete und alles andere bezahlen zu können. Zum Glück macht mir mein Nebenjob wenigstens Spaß. Ich weiß nicht, ________ ich das sonst durchhalten würde. Vielleicht habe ich dir schon erzählt, dass ich abends und am Wochenende in einer Kneipe in der Küche helfe. Das ist zwar oft sehr anstrengend, ________ anderseits ist dauernd was los, es wird nicht langweilig, und meine Kollegen sind total nett. Erinnerst du dich noch an unsere Zeit in der Grundschule? Mit acht Jahren wollte ich ja ________ Kellnerin werden, weil man da Trinkgeld bekommt. Naja, jetzt bin ich in der Küche gelandet, knapp daneben ist auch vorbei ;)
+
+Was macht denn deine Ausbildung? Wenn ich ________ nicht täusche, bist du ja in einem halben Jahr schon fertig, oder? Das ist ja nicht mehr lang!
+
+Neulich habe ich übrigens Tina und Kevin hier in der Nähe der Uni getroffen – die waren ja schon ein Paar, ________ wir noch in der Schule gegangen sind, und jetzt will sie tatsächlich verheiratet!
+
+Wie sehen denn deine Pläne für die ________ Wochenenden aus? Wir könnten uns ja vielleicht mal wieder treffen und in Ruhe quatschen – hättest du Lust ________ ?
+
+In meiner Straße hat vor einem Monat ein nettes kleines Café aufgemacht, die haben nicht nur sehr leckere Kuchen, ________ auch einige kleine Gerichte zu wirklich günstigen Preisen. Wäre das was ________ dich? Mail wir doch einfach, wenn du magst, ich würde mich freuen.
+
+Viele Grüße,
+
+Nadine`
+          },
+          { 
+            id: "s5", 
+            title: "Sprachbausteine, Teil 2", 
+            points: 15,
+            passageTitle: "Aufgabe: Lesen Sie den Text und entscheiden Sie, welches Wort in welche Lücke passt. Sie können jedes Wort nur einmal verwenden. Nicht alle Wörter passen in den Text.",
+            passage: "",
+            questions: [],
+            fillBlanks2: [
+              {
+                id: "31",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "KAUM"
+              },
+              {
+                id: "32", 
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "AUF"
+              },
+              {
+                id: "33",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "VORBEI"
+              },
+              {
+                id: "34",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "STATT"
+              },
+              {
+                id: "35",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "INNERHALB"
+              },
+              {
+                id: "36",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "MÜSSEN"
+              },
+              {
+                id: "37",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "AN"
+              },
+              {
+                id: "38",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "SOLLEN"
+              },
+              {
+                id: "39",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "DANN"
+              },
+              {
+                id: "40",
+                options: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+                correctAnswer: "DENN"
+              }
+            ],
+            wordBank: ["AN", "AUF", "BEINAHE", "DAFÜR", "DANN", "DENN", "DÜRFEN", "FAST", "INNERHALB", "KAUM", "MÜSSEN", "SOLLEN", "STATT", "VOR", "VORBEI"],
+            fillText2: `Das Fahrrad: ernsthafte Konkurrenz fürs Auto?
+
+Welches Fortbewegungsmittel, denken Sie, wird in Deutschland am häufigsten benutzt? Natürlich das Automobil. Volkswagen, Porsche, Mercedes Benz, BMW, Audi: In ________ einem anderen Land gibt es so viele Automobilfabriken wie in Deutschland, spielt die Automobilindustrie eine so große Rolle. Nahezu jeder Haushalt verfügt über mindestens ein Auto, das Auto spielt im Leben der Deutschen eine große Rolle, sowohl als Fortbewegungsmittel zum Arbeitsplatz oder in den Urlaub als auch als Statussymbol: Zeig mir dein Auto und ich weiß, wer du bist.
+
+Doch hat das Autofahren auch Schattenseiten. Mangelnde Bewegungsmöglichkeiten, gesundheitliche Probleme und Stress bringen zumindest in den Großstädten immer mehr Autofahrer dazu, sich vom Automobil freizumachen und ________ ein anderes Verkehrsmittel umzusteigen, das in dem Ruf steht, gesünder zu sein als das Auto: das Fahrrad. Nicht nur in der Freizeit, sondern auch auf dem Weg zum Arbeitsplatz wird das Rad benutzt. "Ich habe keine Lust, Morgen für Morgen im Stau zu stehen und Zeit zu verlieren", sagt Bettina Meier (25): "Da ist es viel entspannender, auf den zumeist gut ausgebauten Fahrradwegen an den im Stau wartenden Fahrzeugen ________ und ausgeruht am Arbeitsplatz anzukommen."
+
+Dass Fahrradfahren um einiges gesünder ist, als hinter dem Lenkrad zu sitzen, bestätigen auch die Mediziner. Wer Fahrrad fährt ________ zu sitzen, bringt seinen Blutkreislauf in Schwung, stärkt die Abwehrkräfte des Körpers und trainiert seinen Körper. Auch die Bewegung an der frischen Luft tut Menschen gut, die sich sonst die meiste Zeit ________ geschlossener Räume in Büros, Schulen oder Fabriken aufhalten ________.
+
+Auch die Geschäftswelt hat die Fahrradfahrer als Kunden entdeckt. Ein breites Angebot ________ Zubehör für Fahrräder von schicken Radfelgen über sportliche Mehrganggetriebe, mit denen Berge kein Problem mehr darstellen, bis zur Designer-Trinkflasche machen aus dem einfachen Fahrrad ein exlusives Fahrzeug. Und natürlich darf bei keinem Fahrradfahrer eine aufwändige Sicherheitsausstattung mehr fehlen: Schutzhelme, Ellenbogen- und Knieschützer, die das Fahrrad im Falle eines Unfalls fast so sicher wie einen Panzer machen ________.
+
+Nur wenn es regnet und das passiert in Deutschland leider nicht so selten -, ________ sind die Autoschlangen wieder länger. ________ einen praktischen Wetterschutz für Radfahrer haben die Geschäfte noch nicht im Angebot.`
+          }
+        ]
+      };
+
+      /* ===== State & DOM refs ===== */
+      let state = { 
+        sectionIndex: 0, 
+        questionIndex: 0, 
+        answers: {}, 
+        marked: {}, 
+        remaining: exam.durationSec,
+        showResults: false,
+        timerStarted: false,
+        timerInterval: null
+      };
+      const topTiles = document.getElementById('topTiles-lesen');
+      const passageTitleEl = document.getElementById('passageTitle-lesen');
+      const passageContentEl = document.getElementById('passageContent-lesen');
+      const sectionNameEl = document.getElementById('sectionName-lesen');
+      const questionTitleEl = document.getElementById('questionTitle-lesen');
+      const questionBodyEl = document.getElementById('questionBody-lesen');
+      const headingsBankContainer = document.getElementById('headingsBankContainer-lesen');
+      const timerEl = document.getElementById('timer-lesen');
+      const statusText = document.getElementById('statusText-lesen');
+      const resultBtn = document.getElementById('resultBtn-lesen');
+      const resetBtn = document.getElementById('resetBtn-lesen');
+      const resetSectionBtn = document.getElementById('resetSectionBtn-lesen');
+
+      /* ===== Timer Functions ===== */
+      function startTimer(){
+        if(state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        
+        state.timerStarted = true;
+        state.timerInterval = setInterval(()=>{
+          if(state.remaining <= 0){
+            clearInterval(state.timerInterval);
+            timerEl.textContent = 'Zeit abgelaufen';
+            return;
+          }
+          state.remaining--;
+          updateTimerDisplay();
+        }, 1000);
+      }
+
+      function resetTimer(){
+        if(state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        state.remaining = exam.durationSec;
+        state.timerStarted = false;
+        updateTimerDisplay();
+        startTimer();
+      }
+
+      function updateTimerDisplay(){
+        const min = Math.floor(state.remaining / 60);
+        const sec = state.remaining % 60;
+        timerEl.textContent = `Verbleibende Zeit: ${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+      }
+
+      /* ===== Reset Section Function ===== */
+      function resetCurrentSection() {
+        const currentSection = exam.sections[state.sectionIndex];
+        
+        if (confirm(`Möchten Sie wirklich den Teil "${currentSection.title}" zurücksetzen? Alle Antworten in diesem Teil werden gelöscht.`)) {
+          if (currentSection.id === 's1') {
+            currentSection.texts.forEach(text => {
+              delete state.answers[text.id];
+            });
+          } else if (currentSection.id === 's2') {
+            currentSection.questions.forEach(question => {
+              delete state.answers[question.id];
+            });
+          } else if (currentSection.id === 's3') {
+            currentSection.situations.forEach(situation => {
+              delete state.answers[situation.id];
+            });
+          } else if (currentSection.id === 's4') {
+            currentSection.fillBlanks.forEach(blank => {
+              delete state.answers[blank.id];
+            });
+          } else if (currentSection.id === 's5') {
+            currentSection.fillBlanks2.forEach(blank => {
+              delete state.answers[blank.id];
+            });
+          }
+          
+          renderAll();
+        }
+      }
+
+      /* ===== Render ===== */
+      function renderTopTiles(){ 
+        topTiles.innerHTML=''; 
+        exam.sections.forEach((sec,idx)=>{ 
+          const div=document.createElement('div'); 
+          div.className='tile'+(idx===state.sectionIndex?' active':'')+(isSectionDone(sec)?' done':''); 
+          div.innerHTML=`<div>${sec.title}</div><div class="points">${sec.points} P</div>`; 
+          div.onclick=()=>{state.sectionIndex=idx; state.questionIndex=0; state.showResults=false; renderAll();}; 
+          topTiles.appendChild(div); 
+        }); 
+      }
+
+      function isSectionDone(section){
+        if(section.id==='s1') return section.texts.every(t=>state.answers[t.id]);
+        if(section.id==='s2') return section.questions.every(q=>state.answers[q.id]);
+        if(section.id==='s3') return section.situations.every(h=>state.answers[h.id] || state.answers[h.id] === 'X');
+        if(section.id==='s4') return section.fillBlanks.every(b=>state.answers[b.id]);
+        if(section.id==='s5') return section.fillBlanks2.every(b=>state.answers[b.id]);
+        return false;
+      }
+
+      function renderAll(){
+        renderTopTiles();
+        const section = exam.sections[state.sectionIndex];
+        sectionNameEl.textContent = section.title;
+        passageTitleEl.textContent = section.passageTitle;
+        
+        resetSectionBtn.style.display = 'block';
+        
+        if(state.showResults){
+          renderResults();
+          return;
+        }
+        
+        if(section.id === 's1'){
+          renderPart1();
+        } else if(section.id === 's2'){
+          renderPart2();
+        } else if(section.id === 's3'){
+          renderPart3();
+        } else if(section.id === 's4'){
+          renderSprachbausteine1();
+        } else if(section.id === 's5'){
+          renderSprachbausteine2();
+        }
+      }
+
+      function renderPart1(){
+        const section = exam.sections[state.sectionIndex];
+        
+        let textsHTML = `<div class="instructions">Ziehen Sie die passenden Überschriften auf die Texte. Sie können jede Überschrift nur einmal verwenden.</div>`;
+        
+        section.texts.forEach((text, idx) => {
+          const letter = String.fromCharCode(97 + idx);
+          const selectedHeading = state.answers[text.id];
+          
+          textsHTML += `
+            <div class="text-container">
+              <div class="text-title">Text ${letter.toUpperCase()}</div>
+              <div class="text-content">${text.content}</div>
+              <div class="title-slot ${selectedHeading ? 'has-title' : ''}" data-text-id="${text.id}">
+                ${selectedHeading ? getHeadingText(selectedHeading) : 'Ziehen Sie hier eine Überschrift hin'}
+              </div>
+            </div>
+          `;
+        });
+        
+        passageContentEl.innerHTML = textsHTML;
+        
+        let headingsHTML = `<div class="headings-bank">`;
+        section.headings.forEach(heading => {
+          const isUsed = section.texts.some(text => state.answers[text.id] === heading.id);
+          
+          headingsHTML += `
+            <div class="heading-item ${isUsed ? 'used' : ''}" draggable="${!isUsed}" data-heading-id="${heading.id}">
+              ${heading.id}) ${heading.text}
+            </div>
+          `;
+        });
+        
+        headingsHTML += `</div>`;
+        
+        headingsBankContainer.innerHTML = headingsHTML;
+        
+        setupDragAndDrop();
+        
+        questionBodyEl.innerHTML = '';
+        questionTitleEl.textContent = '';
+      }
+
+      function setupDragAndDrop(){
+        const headingItems = document.querySelectorAll('.heading-item:not(.used)');
+        const titleSlots = document.querySelectorAll('.title-slot');
+        
+        headingItems.forEach(item => {
+          item.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', e.target.dataset.headingId);
+          });
+        });
+        
+        titleSlots.forEach(slot => {
+          slot.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            slot.style.background = '#e8f4ff';
+          });
+          
+          slot.addEventListener('dragleave', (e) => {
+            slot.style.background = slot.classList.contains('has-title') ? '#e8fbe9' : '#f8fbff';
+          });
+          
+          slot.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const headingId = e.dataTransfer.getData('text/plain');
+            const textId = slot.dataset.textId;
+            
+            Object.keys(state.answers).forEach(key => {
+              if(state.answers[key] === headingId) {
+                delete state.answers[key];
+              }
+            });
+            
+            state.answers[textId] = headingId;
+            renderAll();
+          });
+        });
+      }
+
+      function renderPart2(){
+        const section = exam.sections[state.sectionIndex];
+        
+        passageContentEl.innerHTML = `<div class="passage">${section.passage}</div>`;
+        
+        let questionsHTML = `<div class="all-questions">`;
+        
+        section.questions.forEach((question, idx) => {
+          const questionNumber = idx + 1;
+          const userAnswer = state.answers[question.id];
+          
+          questionsHTML += `
+            <div class="question-block">
+              <div class="question-text">${questionNumber}. ${question.text}</div>
+              <div class="options">
+                ${question.options.map(opt => `
+                  <div class="option ${userAnswer === opt.id ? 'selected' : ''}" 
+                       onclick="window.lesenApp.selectOption('${question.id}', '${opt.id}')">
+                    <div class="radio"></div>
+                    <div>${opt.text}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        });
+        
+        questionsHTML += `</div>`;
+        
+        questionBodyEl.innerHTML = questionsHTML;
+        questionTitleEl.textContent = '';
+        headingsBankContainer.innerHTML = '';
+      }
+
+      function renderPart3(){
+        const section = exam.sections[state.sectionIndex];
+        
+        let textsHTML = `
+          <div class="instructions">Ziehen Sie die passenden Situationen auf die Texte. Sie können jede Situation nur einmal verwenden. Manchmal passt keine Situation.</div>
+          <div class="texts-list">
+            <h3>Texte (A-L)</h3>
+        `;
+        
+        section.texts.forEach(text => {
+          const userAnswer = Object.keys(state.answers).find(key => state.answers[key] === text.id);
+          const selectedSituation = userAnswer ? section.situations.find(h => h.id === userAnswer) : null;
+          
+          textsHTML += `
+            <div class="text-item" data-text-id="${text.id}">
+              <div class="text-letter">${text.id})</div>
+              <div class="text-content">${text.text}</div>
+              <div class="title-slot ${userAnswer ? 'has-title' : ''} ${userAnswer === 'X' ? 'has-x' : ''}" data-text-id="${text.id}">
+                ${selectedSituation ? selectedSituation.text : (userAnswer === 'X' ? 'X - Keine passende Situation' : 'Ziehen Sie hier eine Situation hin')}
+              </div>
+            </div>
+          `;
+        });
+        
+        textsHTML += `</div>`;
+        
+        passageContentEl.innerHTML = textsHTML;
+        
+        let situationsHTML = `
+          <div class="situations-list">
+            <h3>Situationen (11-20)</h3>
+        `;
+        
+        section.situations.forEach((situation, idx) => {
+          const situationNumber = parseInt(situation.id);
+          const isUsed = state.answers[situation.id];
+          const isX = state.answers[situation.id] === 'X';
+          
+          situationsHTML += `
+            <div class="situation-item ${isUsed ? 'used' : ''}" draggable="${!isUsed}" data-situation-id="${situation.id}">
+              <div class="situation-number">${situationNumber}.</div>
+              <div class="situation-text">${situation.text}</div>
+              ${!isUsed ? `<button class="exam-btn no-match ${isX ? 'selected' : ''}" onclick="window.lesenApp.markNoMatch('${situation.id}')">X - Kein passender Text</button>` : ''}
+            </div>
+          `;
+        });
+        
+        situationsHTML += `</div>`;
+        
+        questionBodyEl.innerHTML = situationsHTML;
+        questionTitleEl.textContent = '';
+        headingsBankContainer.innerHTML = '';
+        
+        setupPart3DragAndDrop();
+      }
+
+      function markNoMatch(situationId) {
+        Object.keys(state.answers).forEach(key => {
+          if(state.answers[key] === situationId) {
+            delete state.answers[key];
+          }
+        });
+        
+        state.answers[situationId] = 'X';
+        try{ localStorage.setItem('lesenAnswers', JSON.stringify(state.answers)); }catch(e){}
+        
+        renderAll();
+      }
+
+      function setupPart3DragAndDrop(){
+        const situationItems = document.querySelectorAll('.situation-item:not(.used)');
+        const textSlots = document.querySelectorAll('.text-item .title-slot');
+        
+        situationItems.forEach(item => {
+          item.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', e.target.dataset.situationId);
+          });
+        });
+        
+        textSlots.forEach(slot => {
+          slot.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            slot.style.background = '#e8f4ff';
+          });
+          
+          slot.addEventListener('dragleave', (e) => {
+            const hasTitle = slot.classList.contains('has-title');
+            const hasX = slot.classList.contains('has-x');
+            slot.style.background = hasTitle ? '#e8fbe9' : (hasX ? '#f8d7da' : '#f8fbff');
+          });
+          
+          slot.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const situationId = e.dataTransfer.getData('text/plain');
+            const textId = slot.dataset.textId;
+            
+            Object.keys(state.answers).forEach(key => {
+              if(state.answers[key] === situationId) {
+                delete state.answers[key];
+              }
+            });
+            
+            state.answers[situationId] = textId;
+            renderAll();
+          });
+        });
+      }
+
+      function renderSprachbausteine1(){
+        const section = exam.sections[state.sectionIndex];
+        
+        let textWithBlanks = section.fillText;
+        
+        const blankPlaceholders = [];
+        section.fillBlanks.forEach(blank => {
+          blankPlaceholders.push(`BLANK_${blank.id}`);
+        });
+        
+        let tempText = textWithBlanks;
+        blankPlaceholders.forEach((placeholder, index) => {
+          tempText = tempText.replace('________', placeholder);
+        });
+        
+        section.fillBlanks.forEach(blank => {
+          const userAnswer = state.answers[blank.id];
+          const displayText = userAnswer ? userAnswer : '________';
+          tempText = tempText.replace(`BLANK_${blank.id}`, `<span class="blank-word ${userAnswer ? 'has-answer' : ''}" data-blank-id="${blank.id}">${displayText}</span>`);
+        });
+        
+        passageContentEl.innerHTML = `
+          <div class="instructions">Klicken Sie auf jede Lücke und wählen Sie das passende Wort aus. Sie können die Lücken in beliebiger Reihenfolge ausfüllen.</div>
+          <div class="fill-blank-container">${tempText}</div>
+        `;
+        
+        document.querySelectorAll('.blank-word').forEach(blank => {
+          blank.addEventListener('click', (e) => {
+            showOptionsPopup(e.target);
+          });
+        });
+        
+        let optionsHTML = `<div class="horizontal-options" style="gap: 8px;">`;
+        
+        section.fillBlanks.forEach(blank => {
+          const userAnswer = state.answers[blank.id];
+          
+          optionsHTML += `
+            <div class="option-row" style="padding: 8px; margin-bottom: 5px;">
+              <div class="option-number">${blank.id}</div>
+              <div class="option-buttons">
+                ${blank.options.map(opt => `
+                  <div class="option-btn ${userAnswer === opt ? 'selected' : ''}" 
+                       onclick="window.lesenApp.selectSprachbausteine1('${blank.id}', '${opt}')" 
+                       style="padding: 6px 12px; font-size: 12px;">
+                    ${opt}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        });
+        
+        optionsHTML += `</div>`;
+        
+        questionBodyEl.innerHTML = optionsHTML;
+        questionTitleEl.textContent = '';
+        headingsBankContainer.innerHTML = '';
+      }
+
+      function showOptionsPopup(blankElement){
+        const existingPopup = document.querySelector('.options-popup');
+        if(existingPopup) {
+          existingPopup.remove();
+        }
+        
+        const blankId = blankElement.getAttribute('data-blank-id');
+        const section = exam.sections.find(s => s.id === 's4');
+        const blank = section.fillBlanks.find(b => b.id === blankId);
+        
+        if(!blank) return;
+        
+        const popup = document.createElement('div');
+        popup.className = 'options-popup';
+        
+        blank.options.forEach(opt => {
+          const optionItem = document.createElement('div');
+          optionItem.className = 'option-item';
+          optionItem.textContent = opt;
+          optionItem.onclick = () => {
+            selectSprachbausteine1(blankId, opt);
+            popup.remove();
+          };
+          popup.appendChild(optionItem);
+        });
+        
+        blankElement.appendChild(popup);
+      }
+
+      function selectSprachbausteine1(blankId, answer){
+        state.answers[blankId] = answer;
+        renderAll();
+      }
+
+      function renderSprachbausteine2(){
+        const section = exam.sections[state.sectionIndex];
+        let textWithPlaceholders = section.fillText2;
+        const placeholders = [];
+        section.fillBlanks2.forEach(blank => {
+          const ph = `BLANK_${blank.id}`;
+          placeholders.push({id: blank.id, ph});
+          textWithPlaceholders = textWithPlaceholders.replace('________', ph);
+        });
+
+        placeholders.forEach(item => {
+          const userAnswer = state.answers[item.id];
+          const displayText = userAnswer ? userAnswer : '________';
+          const span = `<span class="blank-slot ${userAnswer ? 'has-answer' : ''}" data-blank-id="${item.id}">${displayText}</span>`;
+          textWithPlaceholders = textWithPlaceholders.replace(item.ph, span);
+        });
+
+        passageContentEl.innerHTML = `
+          <div class="instructions">Klicken Sie auf jede Lücke und wählen Sie das passende Wort aus. Sie können jedes Wort nur einmal verwenden.</div>
+          <div class="fill-blank-container">${textWithPlaceholders}</div>
+        `;
+
+        document.querySelectorAll('.blank-slot').forEach(slot => {
+          slot.addEventListener('click', (e) => {
+            showSprachbausteine2Options(slot);
+          });
+        });
+
+        let wordBankHTML = `<div class="word-bank-vertical" style="gap: 8px;">`;
+        const usedWords = Object.values(state.answers);
+        const bank = section.wordBank && section.wordBank.length ? section.wordBank : (section.fillBlanks2[0] ? section.fillBlanks2[0].options : []);
+        bank.forEach(word => {
+          const isUsed = usedWords.includes(word);
+          wordBankHTML += `
+            <div class="bank-word-vertical ${isUsed ? 'used' : ''}" 
+                 draggable="${!isUsed}" 
+                 data-word="${word}"
+                 ${!isUsed ? `onclick="window.lesenApp.selectSprachbausteine2FromBank('${word}')"` : ''}>
+              ${word}
+            </div>
+          `;
+        });
+        wordBankHTML += `</div>`;
+        questionBodyEl.innerHTML = wordBankHTML;
+        questionTitleEl.textContent = '';
+        headingsBankContainer.innerHTML = '';
+
+        setupSprachbausteine2DragAndDrop();
+      }
+
+      let lastClickedSprachSlot = null;
+
+      function setupSprachbausteine2DragAndDrop(){
+        const bankWords = Array.from(document.querySelectorAll('.bank-word-vertical'));
+        bankWords.forEach(el => {
+          const word = el.dataset.word;
+          if(!el.classList.contains('used')){
+            el.setAttribute('draggable','true');
+          } else {
+            el.setAttribute('draggable','false');
+          }
+          el.removeEventListener('dragstart', el._dstart);
+          el._dstart = (e) => {
+            e.dataTransfer.setData('text/plain', word);
+            e.dataTransfer.setData('source', 'bank');
+          };
+          el.addEventListener('dragstart', el._dstart);
+
+          el.removeEventListener('click', el._onclick);
+          el._onclick = () => {
+            if(el.classList.contains('used')) return;
+            selectSprachbausteine2FromBank(word);
+          };
+          el.addEventListener('click', el._onclick);
+        });
+
+        const slots = Array.from(document.querySelectorAll('.blank-slot'));
+        slots.forEach(slot => {
+          slot.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            slot.classList.add('drag-over');
+          });
+          slot.addEventListener('dragleave', (e) => {
+            slot.classList.remove('drag-over');
+          });
+          slot.addEventListener('drop', (e) => {
+            e.preventDefault();
+            slot.classList.remove('drag-over');
+            const word = e.dataTransfer.getData('text/plain') || e.dataTransfer.getData('text/html');
+            if(!word) return;
+            const blankId = slot.dataset.blankId;
+            if(!blankId) return;
+            Object.keys(state.answers).forEach(k => {
+              if(state.answers[k] === word){
+                delete state.answers[k];
+              }
+            });
+            const prev = state.answers[blankId];
+            if(prev){
+              const prevEl = Array.from(document.querySelectorAll('.bank-word-vertical')).find(b=>b.dataset.word === prev);
+              if(prevEl){
+                prevEl.classList.remove('used');
+                prevEl.setAttribute('draggable','true');
+                prevEl.addEventListener('click', prevEl._onclick);
+              }
+            }
+            const bankEl = Array.from(document.querySelectorAll('.bank-word-vertical')).find(b=>b.dataset.word === word);
+            if(bankEl){
+              bankEl.classList.add('used');
+              bankEl.setAttribute('draggable','false');
+              bankEl.removeEventListener('click', bankEl._onclick);
+            }
+            state.answers[blankId] = word;
+            renderAll();
+          });
+        });
+      }
+
+      function showSprachbausteine2Options(slot){
+        document.querySelectorAll('.blank-slot').forEach(s => s.classList.remove('selected-sprach'));
+        slot.classList.add('selected-sprach');
+        lastClickedSprachSlot = slot;
+      }
+
+      function selectSprachbausteine2FromBank(word){
+        let slot = lastClickedSprachSlot;
+        if(!slot){
+          slot = Array.from(document.querySelectorAll('.blank-slot')).find(s => {
+            const id = s.dataset.blankId;
+            return !state.answers[id];
+          });
+        }
+        if(!slot) {
+          return;
+        }
+        const blankId = slot.dataset.blankId;
+        Object.keys(state.answers).forEach(k => {
+          if(state.answers[k] === word){
+            delete state.answers[k];
+          }
+        });
+        const prev = state.answers[blankId];
+        if(prev){
+          const prevEl = Array.from(document.querySelectorAll('.bank-word-vertical')).find(b=>b.dataset.word === prev);
+          if(prevEl){
+            prevEl.classList.remove('used');
+            prevEl.setAttribute('draggable','true');
+            if(prevEl._onclick) prevEl.addEventListener('click', prevEl._onclick);
+          }
+        }
+        const bankEl = Array.from(document.querySelectorAll('.bank-word-vertical')).find(b=>b.dataset.word === word);
+        if(bankEl){
+          bankEl.classList.add('used');
+          bankEl.setAttribute('draggable','false');
+          if(bankEl._onclick) try{ bankEl.removeEventListener('click', bankEl._onclick); }catch(e){}
+        }
+        state.answers[blankId] = word;
+        try{ localStorage.setItem('lesenAnswers', JSON.stringify(state.answers)); }catch(e){}
+        
+        lastClickedSprachSlot = null;
+        renderAll();
+      }
+
+      function selectOption(questionId, optionId){
+        state.answers[questionId] = optionId;
+        try{ localStorage.setItem('lesenAnswers', JSON.stringify(state.answers)); }catch(e){}
+        
+        renderAll();
+      }
+
+      function renderResults(){
+        let resultsHTML = `<h2>Ergebnisse</h2>`;
+        let totalCorrect = 0;
+        let totalQuestions = 0;
+        
+        exam.sections.forEach(section => {
+          resultsHTML += `<div class="result-item"><h3>${section.title}</h3>`;
+          
+          if(section.id === 's1'){
+            section.texts.forEach(text => {
+              totalQuestions++;
+              const userAnswer = state.answers[text.id] || '-';
+              const correctAnswer = CORRECT_ANSWERS.lesen[text.id];
+              const isCorrect = userAnswer === correctAnswer;
+              if(isCorrect) totalCorrect++;
+              
+              resultsHTML += `
+                <div>Text ${text.id}: ${userAnswer} 
+                ${userAnswer !== '-' ? `<span class="${isCorrect ? 'result-correct' : 'result-incorrect'}">${isCorrect ? '✓' : '✗'}</span>` : ''}
+                </div>
+              `;
+            });
+          } else if(section.id === 's2'){
+            section.questions.forEach(question => {
+              totalQuestions++;
+              const userAnswer = state.answers[question.id] || '-';
+              const correctAnswer = CORRECT_ANSWERS.lesen[question.id];
+              const isCorrect = userAnswer === correctAnswer;
+              if(isCorrect) totalCorrect++;
+              
+              resultsHTML += `
+                <div>${question.text}: ${userAnswer} 
+                ${userAnswer !== '-' ? `<span class="${isCorrect ? 'result-correct' : 'result-incorrect'}">${isCorrect ? '✓' : '✗'}</span>` : ''}
+                </div>
+              `;
+            });
+          } else if(section.id === 's3'){
+            section.situations.forEach(situation => {
+              totalQuestions++;
+              const userAnswer = state.answers[situation.id] || '-';
+              const correctAnswer = CORRECT_ANSWERS.lesen[situation.id];
+              const isCorrect = userAnswer === correctAnswer;
+              if(isCorrect) totalCorrect++;
+              
+              resultsHTML += `
+                <div>Situation ${situation.id}: ${userAnswer} 
+                ${userAnswer !== '-' ? `<span class="${isCorrect ? 'result-correct' : 'result-incorrect'}">${isCorrect ? '✓' : '✗'}</span>` : ''}
+                </div>
+              `;
+            });
+          } else if(section.id === 's4'){
+            section.fillBlanks.forEach(blank => {
+              totalQuestions++;
+              const userAnswer = state.answers[blank.id] || '-';
+              const correctAnswer = CORRECT_ANSWERS.lesen[blank.id];
+              const isCorrect = userAnswer === correctAnswer;
+              if(isCorrect) totalCorrect++;
+              
+              resultsHTML += `
+                <div>Lücke ${blank.id}: ${userAnswer} 
+                ${userAnswer !== '-' ? `<span class="${isCorrect ? 'result-correct' : 'result-incorrect'}">${isCorrect ? '✓' : '✗'}</span>` : ''}
+                </div>
+              `;
+            });
+          } else if(section.id === 's5'){
+            section.fillBlanks2.forEach(blank => {
+              totalQuestions++;
+              const userAnswer = state.answers[blank.id] || '-';
+              const correctAnswer = CORRECT_ANSWERS.lesen[blank.id];
+              const isCorrect = userAnswer === correctAnswer;
+              if(isCorrect) totalCorrect++;
+              
+              resultsHTML += `
+                <div>Lücke ${blank.id}: ${userAnswer} 
+                ${userAnswer !== '-' ? `<span class="${isCorrect ? 'result-correct' : 'result-incorrect'}">${isCorrect ? '✓' : '✗'}</span>` : ''}
+                </div>
+              `;
+            });
+          }
+          
+          resultsHTML += `</div>`;
+        });
+        
+        const percentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+        resultsHTML += `<div class="result-item"><h3>Gesamtergebnis: ${totalCorrect}/${totalQuestions} (${percentage}%)</h3></div>`;
+        
+        passageContentEl.innerHTML = resultsHTML;
+        questionBodyEl.innerHTML = '';
+        sectionNameEl.textContent = 'Ergebnisse';
+        questionTitleEl.textContent = '';
+      }
+
+      /* ===== Event Listeners ===== */
+      document.getElementById('prevBtn-lesen').addEventListener('click', ()=>{
+        if(state.sectionIndex > 0){
+          state.sectionIndex--;
+          state.questionIndex = 0;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-lesen').addEventListener('click', ()=>{
+        if(state.sectionIndex < exam.sections.length - 1){
+          state.sectionIndex++;
+          state.questionIndex = 0;
+          renderAll();
+        }
+      });
+
+      resultBtn.addEventListener('click', ()=>{
+        state.showResults = !state.showResults;
+        renderAll();
+      });
+
+      resetBtn.addEventListener('click', ()=>{
+        if(confirm('Möchten Sie wirklich von neu beginnen? Alle Antworten werden gelöscht.')){
+          state.answers = {};
+          state.marked = {};
+          state.showResults = false;
+          resetTimer();
+          renderAll();
+        }
+      });
+
+      resetSectionBtn.addEventListener('click', resetCurrentSection);
+
+      document.getElementById('saveBtn-lesen').addEventListener('click', ()=>{
+        statusText.textContent = 'Gespeichert';
+        setTimeout(()=>{statusText.textContent = 'Nicht gespeichert'}, 2000);
+      });
+
+      document.getElementById('submitBtn-lesen').addEventListener('click', ()=>{
+        if(confirm('Möchten Sie die Prüfung wirklich abgeben?')){
+          state.showResults = true;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-lesen').addEventListener('click', ()=>{
+        showPage('hoeren-page');
+      });
+
+      /* ===== Initialize ===== */
+      updateTimerDisplay();
+      renderAll();
+      startTimer();
+      
+      // Expose functions to global scope for event handlers
+      window._lesenState = state;
+      window.lesenApp = {
+        selectOption,
+        markNoMatch,
+        selectSprachbausteine1,
+        selectSprachbausteine2FromBank
+      };
+    }
+
+    // ===== HÖREN PAGE FUNCTIONALITY =====
+    function initHoerenPage() {
+      /* ===== Self-contained exam (embedded) ===== */
+      const exam = {
+        id: "exam-hörverstehen",
+        durationSec: 17 * 60, // 17 minutes in seconds
+        sections: [
+          { 
+            id: "hörverstehen1", 
+            title: "Hörverstehen, Teil 1", 
+            points: 25,
+            questions: [
+              {
+                id: "41",
+                text: "Auf der Insel Bali wurden neue Maßnahmen zur Müllentsorgung beschlossen."
+              },
+              {
+                id: "42", 
+                text: "In Nordfrankreich wird nach einem entlaufenen Panther gesucht."
+              },
+              {
+                id: "43",
+                text: "Die Mietervereinigung rät Mieterinnen und Mietern, die Betriebskosten nicht zu bezahlen."
+              },
+              {
+                id: "44",
+                text: "Der Sekt-Hersteller hat die Pläne für sein Bauvorhaben geändert."
+              },
+              {
+                id: "45",
+                text: "Die Löscharbeiten sind noch nicht abgeschlossen."
+              }
+            ]
+          },
+          { 
+            id: "hörverstehen2", 
+            title: "Hörverstehen, Teil 2", 
+            points: 25,
+            questions: [
+              {
+                id: "46",
+                text: "Roland Wünschmann arbeitet Vollzeit als Fußballtrainer bei Viktoria Köln."
+              },
+              {
+                id: "47",
+                text: "Viktoria Köln möchte am Ende der Spielsaison aufsteigen."
+              },
+              {
+                id: "48", 
+                text: "Zu Beginn dieser Saison hat ein Spieler Viktoria Köln verlassen."
+              },
+              {
+                id: "49",
+                text: "Neue Spieler kommen bei Viktoria Köln immer aus der eigenen Jugendmannschaft."
+              },
+              {
+                id: "50",
+                text: "Die Mannschaft von Viktoria Köln hat Schwächen in der Abwehr."
+              },
+              {
+                id: "51",
+                text: "Roland Wünschmann wagt die Prognose, dass diese Saison der 1. FC Mönchengladbach Meister wird."
+              },
+              {
+                id: "52",
+                text: "Roland Wünschmann kann seinen Beruf und sein Ehrenamt als Fußballtrainer miteinander vereinbaren."
+              },
+              {
+                id: "53",
+                text: "Auch die Frau von Roland Wünschmann engagiert sich im Fußball."
+              },
+              {
+                id: "54",
+                text: "Der Vereinsvorstand schätzt Herrn Wünschmanns Arbeit."
+              },
+              {
+                id: "55",
+                text: "Roland Wünschmann ist mit der bisherigen Nachwuchsförderung des Vereins noch nicht voll zufrieden."
+              }
+            ]
+          },
+          { 
+            id: "hörverstehen3", 
+            title: "Hörverstehen, Teil 3", 
+            points: 25,
+            questions: [
+              {
+                id: "56",
+                text: "Sie können im Internet prüfen, ob Ihre aktuelle Bestellung schon unterwegs ist."
+              },
+              {
+                id: "57",
+                text: "Man kann für die Nachtveranstaltung noch Karten im Internet kaufen."
+              },
+              {
+                id: "58",
+                text: "Die Teilnahme an der Party im Burghof kostet nichts."
+              },
+              {
+                id: "59",
+                text: "In Bamberg kann man in der nächsten Woche besonders günstig Mitglied in einem Sportverein werden."
+              },
+              {
+                id: "60",
+                text: "Wer ein wichtiges Anliegen hat, soll eine andere Nummer wählen."
+              }
+            ]
+          }
+        ]
+      };
+
+      /* ===== State & DOM refs ===== */
+      let state = { 
+        sectionIndex: 0, 
+        answers: {}, 
+        remaining: exam.durationSec,
+        showResults: false,
+        timerStarted: false,
+        timerInterval: null
+      };
+      
+      const topTiles = document.getElementById('topTiles-hoeren');
+      const contentContainer = document.getElementById('contentContainer-hoeren');
+      const timerEl = document.getElementById('timer-hoeren');
+      const statusText = document.getElementById('statusText-hoeren');
+
+      /* ===== Timer Functions ===== */
+      function startTimer() {
+        if (state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        
+        state.timerStarted = true;
+        state.timerInterval = setInterval(() => {
+          if (state.remaining <= 0) {
+            clearInterval(state.timerInterval);
+            timerEl.textContent = 'Zeit abgelaufen';
+            return;
+          }
+          state.remaining--;
+          updateTimerDisplay();
+        }, 1000);
+      }
+
+      function resetTimer() {
+        if (state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        state.remaining = exam.durationSec;
+        state.timerStarted = false;
+        updateTimerDisplay();
+        startTimer();
+      }
+
+      function updateTimerDisplay() {
+        const min = Math.floor(state.remaining / 60);
+        const sec = state.remaining % 60;
+        timerEl.textContent = `Verbleibende Zeit: ${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+      }
+
+      /* ===== Render ===== */
+      function renderTopTiles() { 
+        topTiles.innerHTML = ''; 
+        exam.sections.forEach((sec, idx) => { 
+          const div = document.createElement('div'); 
+          div.className = 'tile' + (idx === state.sectionIndex ? ' active' : '') + (isSectionDone(sec) ? ' done' : ''); 
+          div.innerHTML = `<div>${sec.title}</div><div class="points">${sec.points} P</div>`; 
+          div.onclick = () => { state.sectionIndex = idx; state.showResults = false; renderAll(); }; 
+          topTiles.appendChild(div); 
+        }); 
+      }
+
+      function isSectionDone(section) {
+        const answers = state.answers[section.id];
+        if (!answers) return false;
+        
+        const answeredQuestions = Object.keys(answers).length;
+        const totalQuestions = section.questions.length;
+        
+        return answeredQuestions === totalQuestions;
+      }
+
+      function renderAll() {
+        renderTopTiles();
+        
+        if (state.showResults) {
+          renderResults();
+          return;
+        }
+        
+        renderListeningSection();
+      }
+
+      function renderListeningSection() {
+        const section = exam.sections[state.sectionIndex];
+        const currentAnswers = state.answers[section.id] || {};
+        
+        let contentHTML = `
+          <div class="panel-title">${section.title}</div>
+          <div class="instructions">
+            Sie hören die Nachrichten. Entscheiden Sie beim Hören, ob die Aussagen richtig oder falsch sind. 
+            Sie hören die Nachrichten nur einmal. Sie haben jetzt 30 Sekunden, um die Aussagen zu lesen.
+          </div>
+          
+          <div class="listening-task">
+            <table class="true-false-table">
+              <thead>
+                <tr>
+                  <th style="width: 10%">Nr.</th>
+                  <th style="width: 60%">Aussage</th>
+                  <th style="width: 30%">Ihre Antwort</th>
+                </tr>
+              </thead>
+              <tbody>
+        `;
+        
+        section.questions.forEach((question, index) => {
+          const currentAnswer = currentAnswers[question.id] || '';
+          contentHTML += `
+            <tr>
+              <td><strong>${question.id}</strong></td>
+              <td class="question-text">${question.text}</td>
+              <td>
+                <div class="answer-options">
+                  <label class="answer-option">
+                    <input 
+                      type="radio" 
+                      name="q${section.id}_${question.id}" 
+                      value="richtig" 
+                      ${currentAnswer === 'richtig' ? 'checked' : ''}
+                      onchange="window.hoerenApp.updateListeningAnswer('${section.id}', '${question.id}', this.value)"
+                    >
+                    Richtig
+                  </label>
+                  <label class="answer-option">
+                    <input 
+                      type="radio" 
+                      name="q${section.id}_${question.id}" 
+                      value="falsch" 
+                      ${currentAnswer === 'falsch' ? 'checked' : ''}
+                      onchange="window.hoerenApp.updateListeningAnswer('${section.id}', '${question.id}', this.value)"
+                    >
+                    Falsch
+                  </label>
+                </div>
+              </td>
+            </tr>
+          `;
+        });
+        
+        contentHTML += `
+              </tbody>
+            </table>
+          </div>
+        `;
+        
+        contentContainer.innerHTML = contentHTML;
+      }
+
+      function updateListeningAnswer(sectionId, questionId, answer) {
+        if (!state.answers[sectionId]) {
+          state.answers[sectionId] = {};
+        }
+        state.answers[sectionId][questionId] = answer;
+        try{ localStorage.setItem('hoerenAnswers', JSON.stringify(state.answers)); }catch(e){}
+        
+        renderTopTiles();
+      }
+
+      function renderResults() {
+        let resultsHTML = `<div class="panel-title">Ergebnisse - Hörverstehen</div>`;
+        
+        exam.sections.forEach(section => {
+          const userAnswers = state.answers[section.id] || {};
+          let correctCount = 0;
+          
+          resultsHTML += `
+            <div class="listening-task">
+              <h3>${section.title} (${section.points} Punkte)</h3>
+              <table class="true-false-table">
+                <thead>
+                  <tr>
+                    <th style="width: 10%">Nr.</th>
+                    <th style="width: 50%">Aussage</th>
+                    <th style="width: 15%">Ihre Antwort</th>
+                    <th style="width: 15%">Richtige Antwort</th>
+                    <th style="width: 10%">Punkte</th>
+                  </tr>
+                </thead>
+                <tbody>
+          `;
+          
+          section.questions.forEach((question) => {
+            const userAnswer = normalizeAnswer(userAnswers[question.id] || '');
+            const correctAnswer = CORRECT_ANSWERS.hoeren[question.id];
+            const gotCorrect = userAnswer === correctAnswer;
+            const points = gotCorrect ? "1" : "0";
+            
+            if (gotCorrect) correctCount++;
+            
+            const rowClass = gotCorrect ? 'correct-answer' : 'incorrect-answer';
+            
+            resultsHTML += `
+              <tr class="${rowClass}">
+                <td><strong>${question.id}</strong></td>
+                <td class="question-text">${question.text}</td>
+                <td>${userAnswer}</td>
+                <td>${correctAnswer}</td>
+                <td><strong>${points}</strong></td>
+              </tr>
+            `;
+          });
+          
+          const totalPoints = Math.round((correctCount / section.questions.length) * section.points);
+          
+          resultsHTML += `
+                </tbody>
+              </table>
+              <div style="margin-top: 15px; padding: 15px; background: #e3f2fd; border-radius: 6px;">
+                <strong>Erreichte Punkte: ${correctCount}/${section.questions.length} richtig = ${totalPoints}/${section.points} Punkten</strong>
+              </div>
+            </div>
+          `;
+        });
+        
+        contentContainer.innerHTML = resultsHTML;
+      }
+
+      /* ===== Event Listeners ===== */
+      document.getElementById('prevBtn-hoeren').addEventListener('click', () => {
+        if (state.sectionIndex > 0) {
+          state.sectionIndex--;
+          state.showResults = false;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-hoeren').addEventListener('click', () => {
+        if (state.sectionIndex < exam.sections.length - 1) {
+          state.sectionIndex++;
+          state.showResults = false;
+          renderAll();
+        }
+      });
+
+      document.getElementById('resultBtn-hoeren').addEventListener('click', () => {
+        state.showResults = !state.showResults;
+        renderAll();
+      });
+
+      document.getElementById('resetBtn-hoeren').addEventListener('click', () => {
+        if (confirm('Möchten Sie wirklich von neu beginnen? Alle Antworten werden gelöscht.')) {
+          state.answers = {};
+          state.showResults = false;
+          resetTimer();
+          renderAll();
+        }
+      });
+
+      document.getElementById('saveBtn-hoeren').addEventListener('click', () => {
+        statusText.textContent = 'Gespeichert';
+        setTimeout(() => { statusText.textContent = 'Nicht gespeichert' }, 2000);
+      });
+
+      document.getElementById('submitBtn-hoeren').addEventListener('click', () => {
+        if (confirm('Möchten Sie die Prüfung wirklich abgeben?')) {
+          state.showResults = true;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-hoeren').addEventListener('click', () => {
+        showPage('schreiben-page');
+      });
+
+      /* ===== Initialize ===== */
+      updateTimerDisplay();
+      renderAll();
+      startTimer();
+      
+      // Expose functions to global scope for event handlers
+        window._hoerenState = state;
+        window.hoerenApp = {
+        updateListeningAnswer
+      };
+    }
+
+    // ===== SCHREIBEN PAGE FUNCTIONALITY =====
+    function initSchreibenPage() {
+      /* ===== Self-contained exam (embedded) ===== */
+      const exam = {
+        id: "exam-002",
+        durationSec: 30 * 60, // 30 minutes in seconds
+        sections: [
+          { 
+            id: "s1", 
+            title: "Schreiben, Teil 1", 
+            points: 45,
+            passageTitle: "Aufgabe: Schreiben Sie eine E-Mail",
+            passage: "",
+            writingTask: {
+              prompt: `Möchten Sie in Ihrer Freizeit mehr erleben? Neue Leute aus Mainz kennenlernen? Am Wochenende nie mehr allein sein? 
+      Dann werden Sie Mitglied im Freizeitverein!
+      Wir organisieren verschiedene Aktivitäten in Mainz und Umgebung:
+      Wanderungen, Fahrradtouren, Museums- und Theaterbesuche, Spiele- und Kinoabende, Restaurantbesuche und Ausflüge.
+      Jede Woche stehen mindestens zwei unterschiedliche Angebote auf dem Programm.
+      Ob Sport oder Kultur – bei uns kommt jeder auf seine Kosten. Sie können viel Neues ausprobieren und lernen dabei nette Leute kennen.
+      Unsere Mitglieder sind zwischen 26 und 85 Jahre alt. Bei uns ist jeder willkommen, ob Student oder Senior. 
+      Sie finden bei uns neue Freunde und Bekannte, mit denen Sie viel erleben können. Probieren Sie es doch einfach mal aus!
+      Die Mitgliedschaft kostet 20 Euro pro Monat.`,
+              requirements: [
+                "Erklären Sie, was Sie nach dem Lesen der Anzeige erwartet hatten.",
+                "Erklären Sie, warum Sie mit dem Angebot des Freizeitvereins nicht zufrieden sind.",
+                "Machen Sie Verbesserungsvorschläge zum Programm.",
+                "Erklären Sie, was Sie tun werden, wenn sich nichts ändert."
+              ],
+              wordCount: 0
+            }
+          }
+        ]
+      };
+
+      /* ===== State & DOM refs ===== */
+      let state = { 
+        sectionIndex: 0, 
+        answers: {}, 
+        remaining: exam.durationSec,
+        showResults: false,
+        timerStarted: false,
+        timerInterval: null
+      };
+      
+      const topTiles = document.getElementById('topTiles-schreiben');
+      const passageTitleEl = document.getElementById('passageTitle-schreiben');
+      const passageContentEl = document.getElementById('passageContent-schreiben');
+      const writingContainer = document.getElementById('writingContainer-schreiben');
+      const timerEl = document.getElementById('timer-schreiben');
+      const statusText = document.getElementById('statusText-schreiben');
+
+      /* ===== Timer Functions ===== */
+      function startTimer() {
+        if (state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        
+        state.timerStarted = true;
+        state.timerInterval = setInterval(() => {
+          if (state.remaining <= 0) {
+            clearInterval(state.timerInterval);
+            timerEl.textContent = 'Zeit abgelaufen';
+            return;
+          }
+          state.remaining--;
+          updateTimerDisplay();
+        }, 1000);
+      }
+
+      function resetTimer() {
+        if (state.timerInterval) {
+          clearInterval(state.timerInterval);
+        }
+        state.remaining = exam.durationSec;
+        state.timerStarted = false;
+        updateTimerDisplay();
+        startTimer();
+      }
+
+      function updateTimerDisplay() {
+        const min = Math.floor(state.remaining / 60);
+        const sec = state.remaining % 60;
+        timerEl.textContent = `Verbleibende Zeit: ${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+      }
+
+      /* ===== Render ===== */
+      function renderTopTiles() { 
+        topTiles.innerHTML = ''; 
+        exam.sections.forEach((sec, idx) => { 
+          const div = document.createElement('div'); 
+          div.className = 'tile' + (idx === state.sectionIndex ? ' active' : '') + (isSectionDone(sec) ? ' done' : ''); 
+          div.innerHTML = `<div>${sec.title}</div><div class="points">${sec.points} P</div>`; 
+          div.onclick = () => { state.sectionIndex = idx; state.showResults = false; renderAll(); }; 
+          topTiles.appendChild(div); 
+        }); 
+      }
+
+      function isSectionDone(section) {
+        return state.answers[section.id] && state.answers[section.id].length > 0;
+      }
+
+      function renderAll() {
+        renderTopTiles();
+        const section = exam.sections[state.sectionIndex];
+        passageTitleEl.textContent = section.passageTitle;
+        
+        if (state.showResults) {
+          renderResults();
+          return;
+        }
+        
+        renderWritingSection();
+      }
+
+      function renderWritingSection() {
+        const section = exam.sections[state.sectionIndex];
+        
+        passageContentEl.innerHTML = `
+          <div class="writing-task">
+            <div class="writing-prompt">${section.writingTask.prompt}</div>
+            <div class="instructions" style="border:1px solid #e1e8f6; padding:10px; margin:10px 0; border-radius:6px; background:#ffffff;">Sie sind seit zwei Wochen Mitglied im Freizeitverein. Doch Sie sind nicht zufrieden. 
+      Schreiben Sie eine Beschwerde.</div>
+            <div class="writing-requirements">
+              <h4>Schreiben Sie in Ihrer E-Mail:</h4>
+              <ul>
+                ${section.writingTask.requirements.map(req => `<li>${req}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="instructions">
+              Schreiben Sie eine E-Mail (ca. 150-200 Wörter). Achten Sie auf den Textaufbau (Anrede, Einleitung, Hauptteil, Schluss) und eine angemessene Formulierung.
+            </div>
+          </div>
+        `;
+        
+        const currentAnswer = state.answers[section.id] || '';
+        const wordCount = countWords(currentAnswer);
+        
+        writingContainer.innerHTML = `
+          <div class="writing-area">
+            <textarea 
+              class="writing-textarea" 
+              placeholder="Schreiben Sie hier Ihre E-Mail..."
+              oninput="window.schreibenApp.updateWritingAnswer('${section.id}', this.value)"
+            >${currentAnswer}</textarea>
+            <div class="word-counter">
+              Wörter: <span class="count">${wordCount}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      function countWords(text) {
+        return text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      }
+
+      function updateWritingAnswer(sectionId, text) {
+        state.answers[sectionId] = text;
+        try{ localStorage.setItem('schreibenAnswers', JSON.stringify({content: state.answers[sectionId], wordCount: (state.answers[sectionId]||'').trim().split(/\s+/).filter(Boolean).length})); }catch(e){}
+        
+        const wordCount = countWords(text);
+        document.querySelector('.word-counter .count').textContent = wordCount;
+      }
+
+      function renderResults() {
+        let resultsHTML = `<h2>Ergebnisse</h2>`;
+        
+        exam.sections.forEach(section => {
+          resultsHTML += `<div class="writing-task"><h3>${section.title}</h3>`;
+          
+          const userAnswer = state.answers[section.id];
+          const wordCount = countWords(userAnswer);
+          
+          resultsHTML += `
+            <div class="writing-requirements">
+              <h4>Ihre Antwort (${wordCount} Wörter):</h4>
+              <div style="white-space: pre-wrap; background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e8f6; margin-top: 10px;">${userAnswer || 'Keine Antwort'}</div>
+            </div>
+          `;
+          
+          resultsHTML += `</div>`;
+        });
+        
+        passageContentEl.innerHTML = resultsHTML;
+        writingContainer.innerHTML = '';
+      }
+
+      /* ===== Event Listeners ===== */
+      document.getElementById('prevBtn-schreiben').addEventListener('click', () => {
+        if (state.sectionIndex > 0) {
+          state.sectionIndex--;
+          state.showResults = false;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-schreiben').addEventListener('click', () => {
+        if (state.sectionIndex < exam.sections.length - 1) {
+          state.sectionIndex++;
+          state.showResults = false;
+          renderAll();
+        }
+      });
+
+      document.getElementById('resultBtn-schreiben').addEventListener('click', () => {
+        state.showResults = !state.showResults;
+        renderAll();
+      });
+
+      document.getElementById('resetBtn-schreiben').addEventListener('click', () => {
+        if (confirm('Möchten Sie wirklich von neu beginnen? Alle Antworten werden gelöschت.')) {
+          state.answers = {};
+          state.showResults = false;
+          resetTimer();
+          renderAll();
+        }
+      });
+
+      document.getElementById('saveBtn-schreiben').addEventListener('click', () => {
+        statusText.textContent = 'Gespeichert';
+        setTimeout(() => { statusText.textContent = 'Nicht gespeichert' }, 2000);
+      });
+
+      document.getElementById('submitBtn-schreiben').addEventListener('click', () => {
+        if (confirm('Möchten Sie die Prüfung wirklich abgeben?')) {
+          state.showResults = true;
+          renderAll();
+        }
+      });
+
+      document.getElementById('nextBtn-schreiben').addEventListener('click', () => {
+        showPage('ergebnisse-page');
+      });
+
+      /* ===== Initialize ===== */
+      updateTimerDisplay();
+      renderAll();
+      startTimer();
+      
+      // Expose functions to global scope for event handlers
+        window._schreibenState = state;
+        window.schreibenApp = {
+        updateWritingAnswer
+      };
+    }
+
+    // ===== ERGEBNISSE PAGE FUNCTIONALITY =====
+    function initErgebnissePage() {
+      const CONFIG = {
+        totals: { 
+          lesen: 105, 
+          hoeren: 75, 
+          schreiben: 45, 
+          gesamt: 225 
+        },
+        counts: { 
+          lesen: 40, 
+          hoeren: 20 
+        }
+      };
+
+      function buildTable(title, dets, total, max) {
+        let html = `<div class="result-item">
+                      <h3>${title} - ${total.toFixed(2)}/${max} Punkte</h3>
+                      <div class="section-table">
+                        <table class="true-false-table">
+                          <thead>
+                            <tr>
+                              <th style="width: 10%">Frage</th>
+                              <th style="width: 40%">Ihre Antwort</th>
+                              <th style="width: 40%">Richtige Antwort</th>
+                              <th style="width: 10%">Ergebnis</th>
+                            </tr>
+                          </thead>
+                          <tbody>`;
+        
+        dets.forEach(x => {
+          const isCorrect = x.richtig;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅ Richtig' : '❌ Falsch';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${x.frage}</strong></td>
+                    <td>${escapeHtml(x.user)}</td>
+                    <td>${escapeHtml(x.correct)}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        });
+        
+        html += `</tbody>
+                </table>
+                <div style="margin-top: 15px; padding: 15px; background: #e3f2fd; border-radius: 6px;">
+                  <strong>Erreichte Punkte: ${total.toFixed(2)}/${max} (${((total/max)*100).toFixed(1)}%)</strong>
+                </div>
+              </div></div>`;
+        return html;
+      }
+
+      function renderLesenDetails(answers) {
+        let html = `<div class="result-item">
+                    <h3>📖 Leseverstehen - Detaillierte Auswertung</h3>`;
+        
+        // Teil 1: Überschriften zuordnen
+        html += `<h4>Teil 1: Überschriften zuordnen</h4>
+                 <table class="true-false-table">
+                   <thead>
+                     <tr>
+                       <th style="width: 10%">Text</th>
+                       <th style="width: 40%">Ihre Überschrift</th>
+                       <th style="width: 40%">Richtige Überschrift</th>
+                       <th style="width: 10%">Ergebnis</th>
+                     </tr>
+                   </thead>
+                   <tbody>`;
+        
+        for (let i = 1; i <= 5; i++) {
+          const id = `text${i}`;
+          const userAnswer = answers[id] || '-';
+          const correctAnswer = CORRECT_ANSWERS.lesen[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>Text ${String.fromCharCode(64 + i)}</strong></td>
+                    <td>${userAnswer !== '-' ? getHeadingText(userAnswer) : '-'}</td>
+                    <td>${getHeadingText(correctAnswer)}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table>`;
+        
+        // Teil 2: Fragen zum Text
+        html += `<h4 style="margin-top: 20px;">Teil 2: Fragen zum Text</h4>
+                 <table class="true-false-table">
+                   <thead>
+                     <tr>
+                       <th style="width: 10%">Frage</th>
+                       <th style="width: 40%">Ihre Antwort</th>
+                       <th style="width: 40%">Richtige Antwort</th>
+                       <th style="width: 10%">Ergebnis</th>
+                     </tr>
+                   </thead>
+                   <tbody>`;
+        
+        for (let i = 1; i <= 5; i++) {
+          const id = `s2q${i}`;
+          const userAnswer = answers[id] || '-';
+          const correctAnswer = CORRECT_ANSWERS.lesen[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${i}</strong></td>
+                    <td>${userAnswer !== '-' ? getOptionText(id, userAnswer) : '-'}</td>
+                    <td>${getOptionText(id, correctAnswer)}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table>`;
+        
+        // Teil 3: Texte zuordnen
+        html += `<h4 style="margin-top: 20px;">Teil 3: Texte zuordnen</h4>
+                 <table class="true-false-table">
+                   <thead>
+                     <tr>
+                       <th style="width: 10%">Situation</th>
+                       <th style="width: 40%">Ihre Antwort</th>
+                       <th style="width: 40%">Richtige Antwort</th>
+                       <th style="width: 10%">Ergebnis</th>
+                     </tr>
+                   </thead>
+                   <tbody>`;
+        
+        for (let i = 11; i <= 20; i++) {
+          const id = i.toString();
+          const userAnswer = answers[id] || '-';
+          const correctAnswer = CORRECT_ANSWERS.lesen[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${i}</strong></td>
+                    <td>${userAnswer !== '-' ? (userAnswer === 'X' ? 'X - Kein passender Text' : `Text ${userAnswer}`) : '-'}</td>
+                    <td>${correctAnswer === 'X' ? 'X - Kein passender Text' : `Text ${correctAnswer}`}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table>`;
+        
+        // Sprachbausteine Teil 1
+        html += `<h4 style="margin-top: 20px;">Sprachbausteine Teil 1</h4>
+                 <table class="true-false-table">
+                   <thead>
+                     <tr>
+                       <th style="width: 10%">Lücke</th>
+                       <th style="width: 40%">Ihre Antwort</th>
+                       <th style="width: 40%">Richtige Antwort</th>
+                       <th style="width: 10%">Ergebnis</th>
+                     </tr>
+                   </thead>
+                   <tbody>`;
+        
+        for (let i = 21; i <= 30; i++) {
+          const id = i.toString();
+          const userAnswer = answers[id] || '-';
+          const correctAnswer = CORRECT_ANSWERS.lesen[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${i}</strong></td>
+                    <td>${userAnswer}</td>
+                    <td>${correctAnswer}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table>`;
+        
+        // Sprachbausteine Teil 2
+        html += `<h4 style="margin-top: 20px;">Sprachbausteine Teil 2</h4>
+                 <table class="true-false-table">
+                   <thead>
+                     <tr>
+                       <th style="width: 10%">Lücke</th>
+                       <th style="width: 40%">Ihre Antwort</th>
+                       <th style="width: 40%">Richtige Antwort</th>
+                       <th style="width: 10%">Ergebnis</th>
+                     </tr>
+                   </thead>
+                   <tbody>`;
+        
+        for (let i = 31; i <= 40; i++) {
+          const id = i.toString();
+          const userAnswer = answers[id] || '-';
+          const correctAnswer = CORRECT_ANSWERS.lesen[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${i}</strong></td>
+                    <td>${userAnswer}</td>
+                    <td>${correctAnswer}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table></div>`;
+        
+        return html;
+      }
+
+      function buildHoerenDetails(answers) {
+        let html = `<table class="true-false-table">
+                      <thead>
+                        <tr>
+                          <th style="width: 10%">Frage</th>
+                          <th style="width: 40%">Ihre Antwort</th>
+                          <th style="width: 40%">Richtige Antwort</th>
+                          <th style="width: 10%">Ergebnis</th>
+                        </tr>
+                      </thead>
+                      <tbody>`;
+        
+        for (let i = 41; i <= 60; i++) {
+          const id = i.toString();
+          const userAnswer = normalizeAnswer(answers[id] || '');
+          const correctAnswer = CORRECT_ANSWERS.hoeren[id];
+          const isCorrect = userAnswer === correctAnswer;
+          const rowClass = isCorrect ? 'correct-answer' : 'incorrect-answer';
+          const resultIcon = isCorrect ? '✅' : '❌';
+          
+          html += `<tr class="${rowClass}">
+                    <td><strong>${id}</strong></td>
+                    <td>${userAnswer}</td>
+                    <td>${correctAnswer}</td>
+                    <td><strong>${resultIcon}</strong></td>
+                  </tr>`;
+        }
+        
+        html += `</tbody></table>`;
+        return html;
+      }
+
+      function readExamResults() {
+        try {
+          const lesen = {};
+          const hoeren = {};
+          const schreiben = { content: '', wordCount: 0 };
+
+          // Try to read from in-memory states
+          try {
+            if (window._lesenState && window._lesenState.answers) {
+              Object.keys(window._lesenState.answers).forEach(k => {
+                lesen[k] = window._lesenState.answers[k];
+              });
+            }
+          } catch (e) {}
+
+          try {
+            if (window._hoerenState && window._hoerenState.answers) {
+              Object.keys(window._hoerenState.answers).forEach(sectionId => {
+                const sec = window._hoerenState.answers[sectionId] || {};
+                Object.keys(sec).forEach(q => {
+                  hoeren[q] = sec[q];
+                });
+              });
+            }
+          } catch (e) {}
+
+          try {
+            if (window._schreibenState && window._schreibenState.answers) {
+              const answers = window._schreibenState.answers;
+              if (answers['s1']) {
+                schreiben.content = answers['s1'];
+              } else {
+                const keys = Object.keys(answers);
+                if (keys.length > 0) schreiben.content = answers[keys[0]] || '';
+              }
+              schreiben.wordCount = (schreiben.content && schreiben.content.trim()) ? String(schreiben.content).trim().split(/\s+/).filter(Boolean).length : 0;
+            }
+          } catch (e) {}
+
+          // Fallback to localStorage
+          try {
+            if (Object.keys(lesen).length === 0) {
+              const storedL = localStorage.getItem('lesenAnswers');
+              if (storedL) Object.assign(lesen, JSON.parse(storedL));
+            }
+          } catch (e) {}
+
+          try {
+            if (Object.keys(hoeren).length === 0) {
+              const storedH = localStorage.getItem('hoerenAnswers');
+              if (storedH) {
+                const parsed = JSON.parse(storedH);
+                // Handle nested structure
+                if (typeof parsed === 'object') {
+                  Object.keys(parsed).forEach(sectionId => {
+                    if (typeof parsed[sectionId] === 'object') {
+                      Object.keys(parsed[sectionId]).forEach(q => {
+                        hoeren[q] = parsed[sectionId][q];
+                      });
+                    }
+                  });
+                }
+              }
+            }
+          } catch (e) {}
+
+          try {
+            if (!schreiben.content) {
+              const storedS = localStorage.getItem('schreibenAnswers');
+              if (storedS) {
+                const obj = JSON.parse(storedS);
+                schreiben.content = obj.content || '';
+                schreiben.wordCount = obj.wordCount || (schreiben.content.trim() ? String(schreiben.content).trim().split(/\s+/).filter(Boolean).length : 0);
+              }
+            }
+          } catch (e) {}
+
+          return { hoeren, lesen, schreiben };
+        } catch (e) {
+          return { hoeren: {}, lesen: {}, schreiben: {} };
+        }
+      }
+
+      function gradeHoeren(answers) {
+        let okCount = 0;
+        
+        for (let q = 41; q <= 60; q++) {
+          const k = q.toString();
+          const uA = normalizeAnswer(answers[k] || '');
+          const exp = CORRECT_ANSWERS.hoeren[k];
+          const ok = (uA !== '-' && uA.toLowerCase() === exp.toLowerCase());
+          if (ok) okCount++;
+        }
+        
+        const total = Number((okCount * (CONFIG.totals.hoeren / CONFIG.counts.hoeren)).toFixed(2));
+        return { okCount, total };
+      }
+
+      function gradeLesen(answers) {
+        let okCount = 0;
+        
+        Object.keys(CORRECT_ANSWERS.lesen).forEach(k => {
+          const exp = CORRECT_ANSWERS.lesen[k];
+          const uA = normalizeAnswer(answers[k] || '');
+          const ok = (uA !== '-' && uA.toLowerCase() === exp.toLowerCase());
+          if (ok) okCount++;
+        });
+        
+        const total = Number((okCount * (CONFIG.totals.lesen / CONFIG.counts.lesen)).toFixed(2));
+        return { okCount, total };
+      }
+
+      function renderResults() {
+        const st = readExamResults();
+        const h = gradeHoeren(st.hoeren || {});
+        const l = gradeLesen(st.lesen || {});
+        const details = document.getElementById('details-ergebnisse');
+        const tiles = document.getElementById('topTiles-ergebnisse');
+        const sScoreRaw = localStorage.getItem('schreibenScore');
+        const sScore = sScoreRaw ? Number(sScoreRaw) : 0;
+
+        details.innerHTML = '';
+        tiles.innerHTML = '';
+
+        const tL = `<div class="results-tile">
+                    <h3>Lesen</h3>
+                    <div class="score">${l.total.toFixed(2)} / ${CONFIG.totals.lesen} Punkte</div>
+                    <div class="small-muted">(${(l.total / CONFIG.totals.lesen * 100).toFixed(2)} %)</div>
+                  </div>`;
+                  
+        const tH = `<div class="results-tile">
+                    <h3>Hören</h3>
+                    <div class="score">${h.total.toFixed(2)} / ${CONFIG.totals.hoeren} Punkte</div>
+                    <div class="small-muted">(${(h.total / CONFIG.totals.hoeren * 100).toFixed(2)} %)</div>
+                  </div>`;
+                  
+        const tS = `<div class="results-tile">
+                    <h3>Schreiben</h3>
+                    <div class="score" id="schreibenScoreDisplay">${sScore.toFixed(2)} / ${CONFIG.totals.schreiben} Punkte</div>
+                    <div class="small-muted">Manuelle Eingabe</div>
+                  </div>`;
+                  
+        tiles.innerHTML = tL + tH + tS;
+
+        details.innerHTML = `<h2>📊 Detaillierte Ergebnisse</h2>
+                            <div class="instructions">Hier sehen Sie einen detaillierten Vergleich Ihrer Antworten mit den richtigen Lösungen.</div>`;
+        
+        details.innerHTML += renderLesenDetails(st.lesen);
+        
+        details.innerHTML += `<div class="result-item">
+                              <h3>👂 Hörverstehen - Detaillierte Auswertung</h3>
+                              ${buildHoerenDetails(st.hoeren)}
+                            </div>`;
+
+        let sHtml = '<div class="result-item"><h3>✍️ Schreiben - Ihre Antwort</h3>';
+        const txt = st.schreiben.content ? escapeHtml(st.schreiben.content) : '<span class="small-muted">Kein Text gefunden.</span>';
+        const wc = st.schreiben.wordCount || '-';
+        
+        sHtml += `<div class="small-muted">Wörter: ${wc}</div>
+                <div style="margin-top:10px;padding:12px;background:#fff;border-radius:8px;border:1px solid #eef6ff;min-height:80px;white-space:pre-wrap;">${txt}</div>
+                <div style="margin-top:10px;display:flex;gap:10px;align-items:center">
+                  Punkte (0–45): 
+                  <input id="sInput" type="number" min="0" max="45" step="0.5" value="${sScore}"> 
+                  <button id="saveS" class="results-btn">Speichern</button>
+                </div></div>`;
+                
+        details.innerHTML += sHtml;
+
+        const total = (l.total + h.total + sScore).toFixed(2);
+        const percent = ((total / CONFIG.totals.gesamt) * 100).toFixed(2);
+        
+        document.getElementById('finalSummary-ergebnisse').innerHTML = `
+          <div class="left">
+            Gesamtpunktzahl: <strong>${total}</strong> / ${CONFIG.totals.gesamt} Punkte<br>
+            <span class="small-muted">Lesen + Hören + Schreiben</span>
+          </div>
+          <div class="right">
+            Prozentsatz: <strong>${percent} %</strong>
+          </div>`;
+
+        document.getElementById('saveS').onclick = () => {
+          const v = Number(document.getElementById('sInput').value) || 0;
+          localStorage.setItem('schreibenScore', v);
+          document.getElementById('schreibenScoreDisplay').textContent = `${v.toFixed(2)} / ${CONFIG.totals.schreiben} Punkte`;
+          
+          const newTotal = (l.total + h.total + v).toFixed(2);
+          const newPercent = ((newTotal / CONFIG.totals.gesamt) * 100).toFixed(2);
+          
+          document.getElementById('finalSummary-ergebnisse').innerHTML = `
+            <div class="left">
+              Gesamtpunktzahl: <strong>${newTotal}</strong> / ${CONFIG.totals.gesamt} Punkte<br>
+              <span class="small-muted">Lesen + Hören + Schreiben</span>
+            </div>
+            <div class="right">
+              Prozentsatz: <strong>${newPercent} %</strong>
+            </div>`;
+        };
+      }
+
+      document.getElementById('calcBtn-ergebnisse').onclick = () => renderResults();
+      document.getElementById('backBtn-ergebnisse').onclick = (e) => {
+        e.preventDefault();
+        showPage('start-page');
+      };
+      
+      renderResults();
+    }
+
+    // تحسين نظام السحب والإفلات للشاشات التي تعمل باللمس
+    function setupTouchDragAndDrop() {
+      if ('ontouchstart' in window) {
+        // تغيير سلوك العناصر القابلة للسحب
+        document.querySelectorAll('[draggable="true"]').forEach(item => {
+          item.addEventListener('touchstart', handleTouchStart);
+          item.addEventListener('touchend', handleTouchEnd);
+        });
+        
+        document.querySelectorAll('.title-slot, .blank-slot').forEach(slot => {
+          slot.addEventListener('touchmove', handleTouchMove);
+          slot.addEventListener('touchend', handleTouchDrop);
+        });
+      }
+    }
+
+    function handleTouchStart(e) {
+      // تنفيذ السحب عند اللمس
+    }
+
+    // استدعاء الدالة عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', setupTouchDragAndDrop);
+  </script>
+</body>
+</html>
